@@ -28,6 +28,7 @@ struct ScanView: View {
 				Text("Scan")
 					.frame(maxWidth: .infinity)
 			}
+			.disabled(viewModel.isScanDisabled)
 			.buttonStyle(.borderedProminent)
 
 			Button {
@@ -36,6 +37,7 @@ struct ScanView: View {
 				Text("Open Camera")
 					.frame(maxWidth: .infinity)
 			}
+			.disabled(viewModel.isScanDisabled)
 			.buttonStyle(.borderedProminent)
 			.sheet(isPresented: $viewModel.isShowingScannerSheet) {
 				ScannerView(
@@ -43,9 +45,26 @@ struct ScanView: View {
 				)
 			}
 
-			if (!viewModel.matchedIngredients.isEmpty) {
-				List(viewModel.matchedIngredients) { ingredient in
-					Text(ingredient.name)
+			if viewModel.isScanning {
+				ProgressView()
+					.progressViewStyle(CircularProgressViewStyle())
+					.padding()
+			} else if viewModel.matchedIngredients.isEmpty {
+				HStack {
+					Image(systemName: "exclamationmark.triangle.fill")
+						.font(.title3)
+						.foregroundColor(.secondary)
+					Text("No matches found")
+						.font(.title3)
+						.foregroundColor(.secondary)
+						.multilineTextAlignment(.center)
+				}
+				.padding()
+			} else {
+				List {
+					ForEach(viewModel.matchedIngredients) { ingredient in
+						Text(ingredient.name)
+					}
 				}
 			}
 		}

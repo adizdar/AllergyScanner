@@ -30,7 +30,7 @@ class MyIngridientsViewModel: ObservableObject {
 
 	func filteredIngredients(for searchText: String) -> [Ingredient] {
 		if searchText.isEmpty {
-			return self.ingredients
+			return self.ingredients.sorted(by: { $0.name < $1.name })
 		} else {
 			return self.ingredients.filter {
 				$0.name.localizedCaseInsensitiveContains(searchText)

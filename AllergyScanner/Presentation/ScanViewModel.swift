@@ -14,6 +14,11 @@ class ScanViewModel: ObservableObject {
 	@Published var matchedIngredients: [Ingredient] = []
 	@Published var isShowingScannerSheet = false
 	@Published var hasFocused: Bool = false
+	@Published var isScanning = false
+
+	var isScanDisabled: Bool {
+		return self.isScanning
+	}
 
 	private var store = IngredientStore()
 	private var cancellables = Set<AnyCancellable>()
@@ -28,14 +33,30 @@ class ScanViewModel: ObservableObject {
 	}
 
 	func scanTextForIngridients() {
+		self.hasFocused = false
+		self.isScanning = true
+
 		let ingredientsToScan = self.ingridentsToScanText
 			.makeTextToUniqueIngridientsTextArray()
 
-		let matchingIngredients = ingredientsToScan.flatMap {
-			self.store.matchIngredients(query: $0)
-		}
+		Just(ingredientsToScan)
+			.delay(for: .seconds(1), scheduler: DispatchQueue.main)
+			.sink { [weak self] data in
+				guard let self = self else {
+					// TODO add error handling
+					return
+				}
 
-		self.matchedIngredients = matchingIngredients
-		self.hasFocused = false
+				let matchingIngredients = ingredientsToScan.flatMap {
+					self.store.matchIngredients(query: $0)
+				}
+
+				self.matchedIngredients = matchingIngredients
+
+				withAnimation {
+					self.isScanning = false
+				}
+			}
+			.store(in: &cancellables)
 	}
 }
