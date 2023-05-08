@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "56A308D3-035C-41F4-843E-354CC9900A76"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2AD45290-4919-4729-813F-CE71334A1C2F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AllergyScanner/IngridientsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "scanText()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1D5B2F54-53B2-4199-9068-763F5F30962C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AllergyScanner/Repository/IngredientStore.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "matchIngredients(query:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0FFA5275-7DDD-4C01-8816-C76D0959769D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AllergyScanner/Presentation/String+Extension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "makeTextToUniqueIngridientsTextArray()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0FFA5275-7DDD-4C01-8816-C76D0959769D - 481ef0b52d7324aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift.String.makeTextToUniqueIngridientsTextArray() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Presentation/String+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "332">
+               </Location>
+               <Location
+                  uuid = "0FFA5275-7DDD-4C01-8816-C76D0959769D - 481ef0b52d7324aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift.String.makeTextToUniqueIngridientsTextArray() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Presentation/String+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "344">
+               </Location>
+               <Location
+                  uuid = "0FFA5275-7DDD-4C01-8816-C76D0959769D - 481ef0b52d7324aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift.String.makeTextToUniqueIngridientsTextArray() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Presentation/String+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "348">
+               </Location>
+               <Location
+                  uuid = "0FFA5275-7DDD-4C01-8816-C76D0959769D - 481ef0b52d7324aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift.String.makeTextToUniqueIngridientsTextArray() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Presentation/String+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "688">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "06AD046E-C6DC-4945-9CF6-0B2B69017C27"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AllergyScanner/Presentation/String+Extension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "makeTextToUniqueIngridientsTextArray()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "06AD046E-C6DC-4945-9CF6-0B2B69017C27 - 481ef0b52d732583"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift.String.makeTextToUniqueIngridientsTextArray() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Presentation/String+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "1624">
+               </Location>
+               <Location
+                  uuid = "06AD046E-C6DC-4945-9CF6-0B2B69017C27 - 481ef0b52d73246c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift.String.makeTextToUniqueIngridientsTextArray() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Presentation/String+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1144">
+               </Location>
+               <Location
+                  uuid = "06AD046E-C6DC-4945-9CF6-0B2B69017C27 - 481ef0b52d73246c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift.String.makeTextToUniqueIngridientsTextArray() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Presentation/String+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1596">
+               </Location>
+               <Location
+                  uuid = "06AD046E-C6DC-4945-9CF6-0B2B69017C27 - 481ef0b52d73246c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift.String.makeTextToUniqueIngridientsTextArray() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Presentation/String+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1136">
+               </Location>
+               <Location
+                  uuid = "06AD046E-C6DC-4945-9CF6-0B2B69017C27 - 481ef0b52d73246c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift.String.makeTextToUniqueIngridientsTextArray() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Presentation/String+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1196">
+               </Location>
+               <Location
+                  uuid = "06AD046E-C6DC-4945-9CF6-0B2B69017C27 - 481ef0b52d73246c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift.String.makeTextToUniqueIngridientsTextArray() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Presentation/String+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1632">
+               </Location>
+               <Location
+                  uuid = "06AD046E-C6DC-4945-9CF6-0B2B69017C27 - 481ef0b52d73246c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift.String.makeTextToUniqueIngridientsTextArray() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Presentation/String+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1248">
+               </Location>
+               <Location
+                  uuid = "06AD046E-C6DC-4945-9CF6-0B2B69017C27 - 481ef0b52d73246c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift.String.makeTextToUniqueIngridientsTextArray() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Presentation/String+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1688">
+               </Location>
+               <Location
+                  uuid = "06AD046E-C6DC-4945-9CF6-0B2B69017C27 - 481ef0b52d73246c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift.String.makeTextToUniqueIngridientsTextArray() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Presentation/String+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1636">
+               </Location>
+               <Location
+                  uuid = "06AD046E-C6DC-4945-9CF6-0B2B69017C27 - 481ef0b52d73246c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift.String.makeTextToUniqueIngridientsTextArray() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Presentation/String+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "2308">
+               </Location>
+               <Location
+                  uuid = "06AD046E-C6DC-4945-9CF6-0B2B69017C27 - 481ef0b52d73246c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift.String.makeTextToUniqueIngridientsTextArray() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Presentation/String+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1928">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0201E06A-749E-4522-B957-EDAAD73B5313"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AllergyScanner/Presentation/String+Extension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "replaceCommasBetweenWordsWithSeperator()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0201E06A-749E-4522-B957-EDAAD73B5313 - 7a9fc5dfb07a2a4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift.String.condenseWhitespace() -&gt; Swift.String"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Presentation/String+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "0201E06A-749E-4522-B957-EDAAD73B5313 - 71c5d3fe958697e6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift.String.replaceCommasWithSemicolons(Swift.String) -&gt; Swift.String"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Presentation/String+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "1216">
+               </Location>
+               <Location
+                  uuid = "0201E06A-749E-4522-B957-EDAAD73B5313 - 71c5d3fe9586947a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift.String.replaceCommasWithSemicolons(Swift.String) -&gt; Swift.String"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Presentation/String+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "1216">
+               </Location>
+               <Location
+                  uuid = "0201E06A-749E-4522-B957-EDAAD73B5313 - 71c5d3fe9586947a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift.String.replaceCommasWithSemicolons(Swift.String) -&gt; Swift.String"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Presentation/String+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "1224">
+               </Location>
+               <Location
+                  uuid = "0201E06A-749E-4522-B957-EDAAD73B5313 - ade6a796c07754a0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift.String.replaceCommasBetweenWordsWithSeperator() -&gt; Swift.String"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Presentation/String+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "1200">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3FA80BA9-6E14-4DF4-BA33-73244B9635BF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AllergyScanner/Presentation/String+Extension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "replaceCommasBetweenWordsWithSeperator()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "695D35E4-8437-4BB1-9A03-D4F284133B95"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AllergyScanner/Presentation/MyIngridientsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "init()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "695D35E4-8437-4BB1-9A03-D4F284133B95 - 181456e40eee2821"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;AllergyScanner.Ingredient&gt;) -&gt; () in closure #1 @Swift.MainActor () -&gt; () in AllergyScanner.MyIngridientsViewModel.init() -&gt; AllergyScanner.MyIngridientsViewModel"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Presentation/MyIngridientsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "695D35E4-8437-4BB1-9A03-D4F284133B95 - 60024cd6a6ab2db7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AllergyScanner.MyIngridientsViewModel.init() -&gt; AllergyScanner.MyIngridientsViewModel"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Presentation/MyIngridientsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "576">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
