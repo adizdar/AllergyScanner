@@ -12,6 +12,7 @@ class MyIngridientsViewModel: ObservableObject {
 	@Published var ingridentsToScanText: String = ""
 	@Published var matchedIngredients: [Ingredient] = []
 	@Published var ingredients: [Ingredient] = []
+	@Published var selection: Set<Ingredient.ID> = []
 
 	private var store = IngredientStore()
 	private var cancellables = Set<AnyCancellable>()

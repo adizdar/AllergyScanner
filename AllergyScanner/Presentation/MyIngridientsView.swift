@@ -15,12 +15,20 @@ struct MyIngridientsView: View {
 		VStack {
 			NavigationView {
 				let result = viewModel.filteredIngredients(for: searchText)
-				List {
+				List(selection: $viewModel.selection) {
 					if result.isEmpty {
 						Text("No results found")
 					} else {
 						ForEach(result) { ingredient in
 							Text(ingredient.name)
+								.tag(ingredient.id)
+								.contextMenu {
+									Button(action: {
+										UIPasteboard.general.string = ingredient.name
+									}) {
+										Label("Copy", systemImage: "doc.on.doc")
+									}
+								}
 						}
 						.onDelete(perform: viewModel.deleteIngridient)
 					}

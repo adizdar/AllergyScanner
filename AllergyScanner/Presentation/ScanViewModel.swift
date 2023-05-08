@@ -15,6 +15,7 @@ class ScanViewModel: ObservableObject {
 	@Published var isShowingScannerSheet = false
 	@Published var hasFocused: Bool = false
 	@Published var isScanning = false
+	@Published var selection: Set<Ingredient.ID> = []
 
 	var isScanDisabled: Bool {
 		return self.isScanning
