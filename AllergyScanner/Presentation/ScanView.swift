@@ -13,6 +13,9 @@ struct ScanView: View {
 
 	var body: some View {
 		VStack {
+			ClearAllButton(operation: viewModel.clearScan)
+				.padding(.horizontal)
+			
 			TextEditor(text: $viewModel.ingridentsToScanText)
 				.focused($hasFocused)
 				.sync($viewModel.hasFocused, with: _hasFocused)

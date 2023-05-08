@@ -59,4 +59,9 @@ class ScanViewModel: ObservableObject {
 			}
 			.store(in: &cancellables)
 	}
+
+	func clearScan() {
+		self.hasFocused = false
+		self.ingridentsToScanText = ""
+	}
 }

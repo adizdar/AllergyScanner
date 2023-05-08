@@ -32,6 +32,11 @@ class SavedIngredientsViewModel: ObservableObject {
 		self.hasFocused = false
 	}
 
+	func clearSaveEditor() {
+		self.hasFocused = false
+		self.ingridentsToSaveText = ""
+	}
+
 	private func saveToStore(using operation: () -> [Ingredient]) {
 		self.showProgressBar = true
 

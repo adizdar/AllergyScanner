@@ -10,7 +10,7 @@ import Foundation
 extension String {
 	internal func makeTextToUniqueIngridientsTextArray() -> [String] {
 		var uniqueItems = Set<String>()
-		let separators = CharacterSet(charactersIn: ";.\(self.wordSeperator())")
+		let separators = CharacterSet(charactersIn: ";.•\(self.wordSeperator())")
 		let formatedText = self.trimmingCharacters(in: .whitespacesAndNewlines)
 			.replacingOccurrences(of: "\n", with: "")
 			.removeExtraWhitespace()

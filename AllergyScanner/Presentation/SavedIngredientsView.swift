@@ -13,6 +13,9 @@ struct SavedIngredientsView: View {
 
 	var body: some View {
 		VStack {
+			ClearAllButton(operation: viewModel.clearSaveEditor)
+				.padding(.horizontal)
+
 			TextEditor(text: $viewModel.ingridentsToSaveText)
 				.focused($hasFocused)
 				.sync($viewModel.hasFocused, with: _hasFocused)

@@ -29,19 +29,18 @@ struct MyIngridientsView: View {
 				.searchable(text: $searchText, prompt: "Search")
 				.navigationTitle("Saved ingredients")
 				.toolbar {
+					ToolbarItemGroup(placement: .navigationBarLeading) {
+						ClearAllButton(
+							operation: viewModel.clearAllSavedIngridients
+						)
+					}
 					ToolbarItemGroup(placement: .navigationBarTrailing) {
 						Text("\(result.count) items")
+							.font(.callout)
+							.foregroundColor(.secondary)
 					}
 				}
 			}
-
-			Button {
-				viewModel.clearAllSavedIngridients()
-			} label: {
-				Text("Clear All")
-					.frame(maxWidth: .infinity)
-			}
-			.buttonStyle(.bordered)
 		}
 		.padding()
 		.onAppear { viewModel.refresh() }
