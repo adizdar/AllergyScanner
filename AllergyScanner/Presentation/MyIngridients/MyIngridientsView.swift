@@ -44,29 +44,31 @@ struct MyIngridientsView: View {
 					}
 					ToolbarItemGroup(placement: .navigationBarTrailing) {
 						HStack {
+							Text("\(result.count) items")
+								.font(.callout)
+								.foregroundColor(.secondary)
+
 							Button {
 								viewModel.createIngridientsDocument()
 							} label: {
-								Text("Export")
+								Label("Export", systemImage: "square.and.arrow.up")
 							}
 							.buttonStyle(.borderless)
+							.help("Export ingredients to a text file")
 							.fileExporter(
 								isPresented: $viewModel.showingExporter,
 								document: viewModel.document,
-								contentType: .plainText
+								contentType: .plainText,
+								defaultFilename: "ingridiends_exported_allergy_scanner_app"
 							) { result in
 								switch result {
 								case .success(let url):
 									print("Saved to \(url)")
 								case .failure(let error):
-									// TODO error handling
+										// TODO error handling
 									print(error.localizedDescription)
 								}
 							}
-
-							Text("\(result.count) items")
-								.font(.callout)
-								.foregroundColor(.secondary)
 						}
 					}
 				}

@@ -17,6 +17,14 @@ struct TextFile: FileDocument {
 		self.text = text
 	}
 
+	init(fileWrapper: FileWrapper) throws {
+		guard let data = fileWrapper.regularFileContents else {
+			throw CocoaError(.fileReadCorruptFile)
+		}
+
+		text = String(decoding: data, as: UTF8.self)
+	}
+
 	init(configuration: ReadConfiguration) throws {
 		if let data = configuration.file.regularFileContents {
 			text = String(decoding: data, as: UTF8.self)

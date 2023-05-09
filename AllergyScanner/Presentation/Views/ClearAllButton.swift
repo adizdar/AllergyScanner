@@ -15,9 +15,9 @@ struct ClearAllButton: View {
 			Button {
 				operation()
 			} label: {
-				Text("Clear All")
+				Label("Clear", systemImage: "trash")
 					.font(.callout)
-					.foregroundColor(.blue)
+					.foregroundColor(.red)
 			}
 			Spacer()
 		}

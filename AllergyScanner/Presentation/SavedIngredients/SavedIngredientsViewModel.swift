@@ -17,6 +17,7 @@ class SavedIngredientsViewModel: ObservableObject {
 	@Published var ingredients: [Ingredient] = []
 	@Published var matchedIngredients: [Ingredient] = []
 	@Published var hasFocused: Bool = false
+	@Published var showingImporter = false
 
 	var isSaving: Bool {
 		return showProgressBar || showSaveConfirmation
@@ -35,6 +36,25 @@ class SavedIngredientsViewModel: ObservableObject {
 	func clearSaveEditor() {
 		self.hasFocused = false
 		self.ingridentsToSaveText = ""
+	}
+
+	func importIngridients(result: Result<[URL], Error>) throws {
+		guard let selectedFile = try result.get().first else {
+				// TODO add error handling or throw error
+			return
+		}
+
+		guard selectedFile.startAccessingSecurityScopedResource() else {
+			fatalError("TODO no rights")
+		}
+
+		let file = try TextFile(
+			fileWrapper: FileWrapper(url: selectedFile)
+		)
+
+		self.ingridentsToSaveText = file.text
+
+		selectedFile.stopAccessingSecurityScopedResource()
 	}
 
 	private func saveToStore(using operation: () -> [Ingredient]) {
