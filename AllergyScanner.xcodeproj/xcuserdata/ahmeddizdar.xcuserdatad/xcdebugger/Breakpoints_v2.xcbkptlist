@@ -470,5 +470,85 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FFAFAA4D-39EB-4DEB-A4D0-9206FE4C02D7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AllergyScanner/Domain/Repository/IngredientStore.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "remove(at:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ED9AE4F4-1964-4C20-BD6D-AE6A0F5248BD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AllergyScanner/Presentation/MyIngridients/MyIngridientsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D81B3763-AB41-4C3D-8231-4821F19BB55B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AllergyScanner/Presentation/MyIngridients/MyIngridientsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "deleteIngridient(at:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D81B3763-AB41-4C3D-8231-4821F19BB55B - d58423f239e537dd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AllergyScanner.MyIngridientsViewModel.deleteIngridient(at: Foundation.IndexSet) -&gt; ()"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Presentation/MyIngridients/MyIngridientsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "D81B3763-AB41-4C3D-8231-4821F19BB55B - d58423f239e537dd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AllergyScanner.MyIngridientsViewModel.deleteIngridient(at: Foundation.IndexSet) -&gt; ()"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Presentation/MyIngridients/MyIngridientsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

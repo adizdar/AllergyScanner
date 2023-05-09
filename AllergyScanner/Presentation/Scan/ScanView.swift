@@ -62,17 +62,10 @@ struct ScanView: View {
 			} else {
 				List(selection: $viewModel.selection) {
 					ForEach(viewModel.matchedIngredients) { ingredient in
-						Text(ingredient.name)
-							.tag(ingredient.id)
-							.contextMenu {
-								Button(action: {
-									UIPasteboard.general.string = ingredient.name
-								}) {
-									Label("Copy", systemImage: "doc.on.doc")
-								}
-							}
+						ModernListRow(ingredient: ingredient)
 					}
 				}
+				.listStyle(.plain)
 			}
 		}
 		.padding()

@@ -83,9 +83,8 @@ class IngredientStore {
 		return ingredientUserDefaults.ingridients
 	}
 
-	func remove(at offsets: IndexSet) {
-		self.ingredients.remove(atOffsets: offsets)
-		self.ingredientUserDefaults.ingridients = self.ingredients
+	func remove(at itemIndex: Int) {
+		self.ingredientUserDefaults.ingridients.remove(at: itemIndex)
 	}
 
 	func clear() {

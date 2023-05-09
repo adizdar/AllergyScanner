@@ -16,6 +16,8 @@ class MyIngridientsViewModel: ObservableObject {
 	@Published var showingExporter = false
 	@Published var document: TextFile?
 
+	private var filterIngridients: [Ingredient] = []
+
 	private var store = IngredientStore()
 	private var cancellables = Set<AnyCancellable>()
 
@@ -33,12 +35,17 @@ class MyIngridientsViewModel: ObservableObject {
 
 	func filteredIngredients(for searchText: String) -> [Ingredient] {
 		if searchText.isEmpty {
-			return self.ingredients.sorted(by: { $0.name < $1.name })
+			self.filterIngridients = self.ingredients.sorted(
+				by: { $0.name < $1.name }
+			)
 		} else {
-			return self.ingredients.filter {
+			self.filterIngridients = self.ingredients.filter {
 				$0.name.localizedCaseInsensitiveContains(searchText)
 			}
 		}
+
+		return self.filterIngridients
+
 	}
 
 	func clearAllSavedIngridients() {
@@ -46,7 +53,20 @@ class MyIngridientsViewModel: ObservableObject {
 	}
 
 	func deleteIngridient(at offsets: IndexSet) {
-		self.store.remove(at: offsets)
+		for index in offsets {
+			guard self.filterIngridients.indices.contains(index) else {
+				fatalError("TODO delteing add bettter way")
+			}
+
+			let itemToDelete = self.filterIngridients[index]
+
+			if
+				let itemIndex = self.ingredients
+					.firstIndex(where: { $0.id == itemToDelete.id })
+			{
+				self.store.remove(at: itemIndex)
+			}
+		}
 	}
 
 	func refresh() {

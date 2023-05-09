@@ -28,6 +28,7 @@
 		69CCD53C2A097A35004D1ED1 /* ClearAllButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD53B2A097A35004D1ED1 /* ClearAllButton.swift */; };
 		69CCD5422A0A550D004D1ED1 /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5412A0A550D004D1ED1 /* TextFile.swift */; };
 		69CCD5452A0A8C1B004D1ED1 /* IngridientTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5442A0A8C1B004D1ED1 /* IngridientTextEditor.swift */; };
+		69CCD5482A0AC302004D1ED1 /* ModernListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5472A0AC302004D1ED1 /* ModernListRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		69CCD53B2A097A35004D1ED1 /* ClearAllButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearAllButton.swift; sourceTree = "<group>"; };
 		69CCD5412A0A550D004D1ED1 /* TextFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFile.swift; sourceTree = "<group>"; };
 		69CCD5442A0A8C1B004D1ED1 /* IngridientTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientTextEditor.swift; sourceTree = "<group>"; };
+		69CCD5472A0AC302004D1ED1 /* ModernListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernListRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 		69CCD53A2A097A1B004D1ED1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				69CCD5472A0AC302004D1ED1 /* ModernListRow.swift */,
 				69CCD53B2A097A35004D1ED1 /* ClearAllButton.swift */,
 				69CCD5442A0A8C1B004D1ED1 /* IngridientTextEditor.swift */,
 			);
@@ -366,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69CCD5212A068387004D1ED1 /* Ingredient.swift in Sources */,
+				69CCD5482A0AC302004D1ED1 /* ModernListRow.swift in Sources */,
 				69CCD52D2A08252D004D1ED1 /* SavedIngredientsViewModel.swift in Sources */,
 				69CCD5312A0840D2004D1ED1 /* View+Extension.swift in Sources */,
 				69CCD5242A068668004D1ED1 /* IngredientStore.swift in Sources */,

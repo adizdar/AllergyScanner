@@ -16,26 +16,14 @@ struct MyIngridientsView: View {
 			NavigationView {
 				let result = viewModel.filteredIngredients(for: searchText)
 				List(selection: $viewModel.selection) {
-					if result.isEmpty {
-						Text("No results found")
-					} else {
-						ForEach(result) { ingredient in
-							Text(ingredient.name)
-								.tag(ingredient.id)
-								.contextMenu {
-									Button(action: {
-										UIPasteboard.general.string = ingredient.name
-									}) {
-										Label("Copy", systemImage: "doc.on.doc")
-									}
-								}
-						}
-						.onDelete(perform: viewModel.deleteIngridient)
+					ForEach(result) { ingredient in
+						ModernListRow(ingredient: ingredient)
 					}
+					.onDelete(perform: viewModel.deleteIngridient)
 				}
-				.listStyle(InsetGroupedListStyle())
+				.listStyle(.plain)
+				.navigationTitle("\(result.count) ingredients")
 				.searchable(text: $searchText, prompt: "Search")
-				.navigationTitle("Saved ingredients")
 				.toolbar {
 					ToolbarItemGroup(placement: .navigationBarLeading) {
 						ClearAllButton(
@@ -44,10 +32,6 @@ struct MyIngridientsView: View {
 					}
 					ToolbarItemGroup(placement: .navigationBarTrailing) {
 						HStack {
-							Text("\(result.count) items")
-								.font(.callout)
-								.foregroundColor(.secondary)
-
 							Button {
 								viewModel.createIngridientsDocument()
 							} label: {
@@ -72,6 +56,7 @@ struct MyIngridientsView: View {
 						}
 					}
 				}
+				.navigationBarTitleDisplayMode(.inline)
 			}
 		}
 		.padding()
