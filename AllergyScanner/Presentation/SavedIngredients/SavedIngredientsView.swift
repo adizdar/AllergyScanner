@@ -13,38 +13,13 @@ struct SavedIngredientsView: View {
 
 	var body: some View {
 		VStack {
-			HStack {
-				ClearAllButton(operation: viewModel.clearSaveEditor)
-					.padding(.horizontal)
-
-				Button {
-					viewModel.showingImporter = true
-				} label: {
-					Label("Import", systemImage: "square.and.arrow.down")
-				}
-				.buttonStyle(.borderless)
-				.fileImporter(
-					isPresented: $viewModel.showingImporter,
-					allowedContentTypes: [.plainText],
-					allowsMultipleSelection: false
-				) { result in
-					do {
-						try viewModel.importIngridients(result: result)
-					} catch {
-						// TODO error handling
-						print(error.localizedDescription)
-					}
-				}
-			}
-
-			TextEditor(text: $viewModel.ingridentsToSaveText)
-				.focused($hasFocused)
-				.sync($viewModel.hasFocused, with: _hasFocused)
-				.font(.system(size: 16, weight: .regular))
-				.foregroundColor(.primary)
-				.padding()
-				.background(Color(.secondarySystemBackground))
-				.cornerRadius(10)
+			IngridientTextEditor(
+				text: $viewModel.ingridentsToSaveText,
+				bindableHasFocues: $viewModel.hasFocused,
+				showingFileImporter: $viewModel.showingImporter,
+				clearOperation: viewModel.clearSaveEditor,
+				importFileOperation: viewModel.importIngridients
+			)
 
 			Button {
 				viewModel.saveTextAsIngridients()

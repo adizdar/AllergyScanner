@@ -13,7 +13,7 @@ extension String {
 
 		let separators = CharacterSet(
 			charactersIn:
-				"\(Self.supportedIngridientSeperators())\(self.wordSeperator())"
+				"\(Self.ingridientSeperators())\(self.wordSeperator())"
 		)
 
 		let formatedText = self.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -32,6 +32,10 @@ extension String {
 	}
 
 	internal static func supportedIngridientSeperators() -> String {
+		return "\(Self.ingridientSeperators()),"
+	}
+
+	private static func ingridientSeperators() -> String {
 		return "\(Self.documentSeperatorForExport()).•"
 	}
 

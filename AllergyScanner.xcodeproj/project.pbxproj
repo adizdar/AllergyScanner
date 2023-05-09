@@ -27,6 +27,7 @@
 		69CCD5392A095278004D1ED1 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5382A095278004D1ED1 /* ScannerView.swift */; };
 		69CCD53C2A097A35004D1ED1 /* ClearAllButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD53B2A097A35004D1ED1 /* ClearAllButton.swift */; };
 		69CCD5422A0A550D004D1ED1 /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5412A0A550D004D1ED1 /* TextFile.swift */; };
+		69CCD5452A0A8C1B004D1ED1 /* IngridientTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5442A0A8C1B004D1ED1 /* IngridientTextEditor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		69CCD5382A095278004D1ED1 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		69CCD53B2A097A35004D1ED1 /* ClearAllButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearAllButton.swift; sourceTree = "<group>"; };
 		69CCD5412A0A550D004D1ED1 /* TextFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFile.swift; sourceTree = "<group>"; };
+		69CCD5442A0A8C1B004D1ED1 /* IngridientTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientTextEditor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				69CCD53B2A097A35004D1ED1 /* ClearAllButton.swift */,
+				69CCD5442A0A8C1B004D1ED1 /* IngridientTextEditor.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				69CCD5312A0840D2004D1ED1 /* View+Extension.swift in Sources */,
 				69CCD5242A068668004D1ED1 /* IngredientStore.swift in Sources */,
 				69CCD5392A095278004D1ED1 /* ScannerView.swift in Sources */,
+				69CCD5452A0A8C1B004D1ED1 /* IngridientTextEditor.swift in Sources */,
 				69CCD4F52A066452004D1ED1 /* ContentView.swift in Sources */,
 				69CCD5422A0A550D004D1ED1 /* TextFile.swift in Sources */,
 				69CCD5372A094029004D1ED1 /* MyIngridientsViewModel.swift in Sources */,

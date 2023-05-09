@@ -15,6 +15,7 @@ class ScanViewModel: ObservableObject {
 	@Published var isShowingScannerSheet = false
 	@Published var hasFocused: Bool = false
 	@Published var isScanning = false
+	@Published var showingImporter = false
 	@Published var selection: Set<Ingredient.ID> = []
 
 	var isScanDisabled: Bool {
@@ -59,6 +60,25 @@ class ScanViewModel: ObservableObject {
 				}
 			}
 			.store(in: &cancellables)
+	}
+
+	func importIngridients(result: Result<[URL], Error>) throws {
+		guard let selectedFile = try result.get().first else {
+			// TODO add error handling or throw error
+			return
+		}
+
+		guard selectedFile.startAccessingSecurityScopedResource() else {
+			fatalError("TODO no rights")
+		}
+
+		let file = try TextFile(
+			fileWrapper: FileWrapper(url: selectedFile)
+		)
+
+		self.ingridentsToScanText = file.text
+
+		selectedFile.stopAccessingSecurityScopedResource()
 	}
 
 	func clearScan() {

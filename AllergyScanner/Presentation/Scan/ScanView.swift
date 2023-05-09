@@ -13,17 +13,13 @@ struct ScanView: View {
 
 	var body: some View {
 		VStack {
-			ClearAllButton(operation: viewModel.clearScan)
-				.padding(.horizontal)
-			
-			TextEditor(text: $viewModel.ingridentsToScanText)
-				.focused($hasFocused)
-				.sync($viewModel.hasFocused, with: _hasFocused)
-				.font(.system(size: 16, weight: .regular))
-				.foregroundColor(.primary)
-				.padding()
-				.background(Color(.secondarySystemBackground))
-				.cornerRadius(10)
+			IngridientTextEditor(
+				text: $viewModel.ingridentsToScanText,
+				bindableHasFocues: $viewModel.hasFocused,
+				showingFileImporter: $viewModel.showingImporter,
+				clearOperation: viewModel.clearScan,
+				importFileOperation: viewModel.importIngridients
+			)
 
 			Button {
 				viewModel.scanTextForIngridients()
