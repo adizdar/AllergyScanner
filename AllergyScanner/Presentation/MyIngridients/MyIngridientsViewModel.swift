@@ -13,6 +13,8 @@ class MyIngridientsViewModel: ObservableObject {
 	@Published var matchedIngredients: [Ingredient] = []
 	@Published var ingredients: [Ingredient] = []
 	@Published var selection: Set<Ingredient.ID> = []
+	@Published var showingExporter = false
+	@Published var document: TextFile?
 
 	private var store = IngredientStore()
 	private var cancellables = Set<AnyCancellable>()
@@ -49,5 +51,12 @@ class MyIngridientsViewModel: ObservableObject {
 
 	func refresh() {
 		self.ingredients = self.store.load()
+		self.document = nil
+	}
+
+	func createIngridientsDocument() {
+		self.document = TextFile(text: self.store.makeTextRepresentation())
+
+		self.showingExporter = true
 	}
 }

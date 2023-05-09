@@ -43,9 +43,31 @@ struct MyIngridientsView: View {
 						)
 					}
 					ToolbarItemGroup(placement: .navigationBarTrailing) {
-						Text("\(result.count) items")
-							.font(.callout)
-							.foregroundColor(.secondary)
+						HStack {
+							Button {
+								viewModel.createIngridientsDocument()
+							} label: {
+								Text("Export")
+							}
+							.buttonStyle(.borderless)
+							.fileExporter(
+								isPresented: $viewModel.showingExporter,
+								document: viewModel.document,
+								contentType: .plainText
+							) { result in
+								switch result {
+								case .success(let url):
+									print("Saved to \(url)")
+								case .failure(let error):
+									// TODO error handling
+									print(error.localizedDescription)
+								}
+							}
+
+							Text("\(result.count) items")
+								.font(.callout)
+								.foregroundColor(.secondary)
+						}
 					}
 				}
 			}

@@ -26,6 +26,7 @@
 		69CCD5372A094029004D1ED1 /* MyIngridientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5362A094029004D1ED1 /* MyIngridientsViewModel.swift */; };
 		69CCD5392A095278004D1ED1 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5382A095278004D1ED1 /* ScannerView.swift */; };
 		69CCD53C2A097A35004D1ED1 /* ClearAllButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD53B2A097A35004D1ED1 /* ClearAllButton.swift */; };
+		69CCD5422A0A550D004D1ED1 /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5412A0A550D004D1ED1 /* TextFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		69CCD5362A094029004D1ED1 /* MyIngridientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIngridientsViewModel.swift; sourceTree = "<group>"; };
 		69CCD5382A095278004D1ED1 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		69CCD53B2A097A35004D1ED1 /* ClearAllButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearAllButton.swift; sourceTree = "<group>"; };
+		69CCD5412A0A550D004D1ED1 /* TextFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,9 +121,8 @@
 		69CCD4F12A066452004D1ED1 /* AllergyScanner */ = {
 			isa = PBXGroup;
 			children = (
+				69CCD5402A0A54A4004D1ED1 /* Domain */,
 				69CCD5252A082205004D1ED1 /* Presentation */,
-				69CCD5222A068654004D1ED1 /* Repository */,
-				69CCD51F2A068368004D1ED1 /* Model */,
 				69CCD4F22A066452004D1ED1 /* AllergyScannerApp.swift */,
 				69CCD4F42A066452004D1ED1 /* ContentView.swift */,
 				69CCD4F62A066454004D1ED1 /* Assets.xcassets */,
@@ -175,16 +176,12 @@
 		69CCD5252A082205004D1ED1 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				69CCD53F2A0A5480004D1ED1 /* MyIngridients */,
+				69CCD53E2A0A5465004D1ED1 /* SavedIngredients */,
+				69CCD53D2A0A544D004D1ED1 /* Scan */,
 				69CCD53A2A097A1B004D1ED1 /* Views */,
-				69CCD5262A08221F004D1ED1 /* ScanView.swift */,
-				69CCD5282A082256004D1ED1 /* SavedIngredientsView.swift */,
-				69CCD52A2A08243D004D1ED1 /* ScanViewModel.swift */,
-				69CCD52C2A08252D004D1ED1 /* SavedIngredientsViewModel.swift */,
 				69CCD52E2A0825DE004D1ED1 /* String+Extension.swift */,
 				69CCD5302A0840D2004D1ED1 /* View+Extension.swift */,
-				69CCD5342A094015004D1ED1 /* MyIngridientsView.swift */,
-				69CCD5362A094029004D1ED1 /* MyIngridientsViewModel.swift */,
-				69CCD5382A095278004D1ED1 /* ScannerView.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -195,6 +192,44 @@
 				69CCD53B2A097A35004D1ED1 /* ClearAllButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		69CCD53D2A0A544D004D1ED1 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				69CCD5262A08221F004D1ED1 /* ScanView.swift */,
+				69CCD52A2A08243D004D1ED1 /* ScanViewModel.swift */,
+				69CCD5382A095278004D1ED1 /* ScannerView.swift */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+		69CCD53E2A0A5465004D1ED1 /* SavedIngredients */ = {
+			isa = PBXGroup;
+			children = (
+				69CCD5282A082256004D1ED1 /* SavedIngredientsView.swift */,
+				69CCD52C2A08252D004D1ED1 /* SavedIngredientsViewModel.swift */,
+			);
+			path = SavedIngredients;
+			sourceTree = "<group>";
+		};
+		69CCD53F2A0A5480004D1ED1 /* MyIngridients */ = {
+			isa = PBXGroup;
+			children = (
+				69CCD5412A0A550D004D1ED1 /* TextFile.swift */,
+				69CCD5342A094015004D1ED1 /* MyIngridientsView.swift */,
+				69CCD5362A094029004D1ED1 /* MyIngridientsViewModel.swift */,
+			);
+			path = MyIngridients;
+			sourceTree = "<group>";
+		};
+		69CCD5402A0A54A4004D1ED1 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				69CCD5222A068654004D1ED1 /* Repository */,
+				69CCD51F2A068368004D1ED1 /* Model */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +368,7 @@
 				69CCD5242A068668004D1ED1 /* IngredientStore.swift in Sources */,
 				69CCD5392A095278004D1ED1 /* ScannerView.swift in Sources */,
 				69CCD4F52A066452004D1ED1 /* ContentView.swift in Sources */,
+				69CCD5422A0A550D004D1ED1 /* TextFile.swift in Sources */,
 				69CCD5372A094029004D1ED1 /* MyIngridientsViewModel.swift in Sources */,
 				69CCD5292A082256004D1ED1 /* SavedIngredientsView.swift in Sources */,
 				69CCD4F32A066452004D1ED1 /* AllergyScannerApp.swift in Sources */,

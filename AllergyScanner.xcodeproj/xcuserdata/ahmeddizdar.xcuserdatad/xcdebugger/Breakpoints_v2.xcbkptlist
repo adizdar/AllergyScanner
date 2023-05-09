@@ -46,8 +46,8 @@
             filePath = "AllergyScanner/Presentation/String+Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "makeTextToUniqueIngridientsTextArray()"
             landmarkType = "7">
             <Locations>
@@ -124,8 +124,8 @@
             filePath = "AllergyScanner/Presentation/String+Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "makeTextToUniqueIngridientsTextArray()"
             landmarkType = "7">
             <Locations>
@@ -307,8 +307,8 @@
             filePath = "AllergyScanner/Presentation/String+Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "replaceCommasBetweenWordsWithSeperator()"
             landmarkType = "7">
             <Locations>
@@ -400,8 +400,8 @@
             filePath = "AllergyScanner/Presentation/String+Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "replaceCommasBetweenWordsWithSeperator()"
             landmarkType = "7">
          </BreakpointContent>
@@ -416,8 +416,8 @@
             filePath = "AllergyScanner/Presentation/MyIngridientsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "init()"
             landmarkType = "7">
             <Locations>
@@ -452,6 +452,22 @@
                   offsetFromSymbolStart = "576">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ADF4AE48-0942-49A9-B35B-E063844AD0E2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AllergyScanner/Repository/IngredientStore.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "exportIngredientsAsTextFile()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

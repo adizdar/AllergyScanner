@@ -10,7 +10,12 @@ import Foundation
 extension String {
 	internal func makeTextToUniqueIngridientsTextArray() -> [String] {
 		var uniqueItems = Set<String>()
-		let separators = CharacterSet(charactersIn: ";.•\(self.wordSeperator())")
+
+		let separators = CharacterSet(
+			charactersIn:
+				"\(Self.supportedIngridientSeperators())\(self.wordSeperator())"
+		)
+
 		let formatedText = self.trimmingCharacters(in: .whitespacesAndNewlines)
 			.replacingOccurrences(of: "\n", with: "")
 			.removeExtraWhitespace()
@@ -24,6 +29,14 @@ extension String {
 			.filter { !$0.isEmpty }
 			.map { $0.replacingOccurrences(of: self.wordSeperator(), with: ",") }
 			.filter { uniqueItems.insert($0.lowercased()).inserted }
+	}
+
+	internal static func supportedIngridientSeperators() -> String {
+		return "\(Self.documentSeperatorForExport()).•"
+	}
+
+	internal static func documentSeperatorForExport() -> String {
+		return ";"
 	}
 
 	private func replaceCommasBetweenWordsWithSeperator() -> String {

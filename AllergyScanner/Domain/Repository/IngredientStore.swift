@@ -96,4 +96,10 @@ class IngredientStore {
 	func publisher() -> AnyPublisher<[Ingredient], Never> {
 		return ingredientsSubject.eraseToAnyPublisher()
 	}
+
+	func makeTextRepresentation() -> String {
+		return self.ingredients
+			.map { $0.name }
+			.joined(separator: String.documentSeperatorForExport())
+	}
 }
