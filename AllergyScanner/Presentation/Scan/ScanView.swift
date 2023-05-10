@@ -69,6 +69,7 @@ struct ScanView: View {
 			}
 		}
 		.padding()
+		.hideKeyboard()
 	}
 }
 

@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct SavedIngredientsView: View {
-	@ObservedObject var viewModel: SavedIngredientsViewModel
+struct SaveIngredientsView: View {
+	@ObservedObject var viewModel: SaveIngredientsViewModel
 	@FocusState private var hasFocused: Bool
 
 	var body: some View {
@@ -50,17 +50,18 @@ struct SavedIngredientsView: View {
 			}
 		}
 		.padding()
+		.hideKeyboard()
 	}
 }
 
 struct SavedIngredientsView_Previews: PreviewProvider {
 	static var previews: some View {
 		Group {
-			SavedIngredientsView(viewModel: SavedIngredientsViewModel())
+			SaveIngredientsView(viewModel: SaveIngredientsViewModel())
 				.previewDevice("iPhone 12 Pro Max")
 				.preferredColorScheme(.light)
 
-			SavedIngredientsView(viewModel: SavedIngredientsViewModel())
+			SaveIngredientsView(viewModel: SaveIngredientsViewModel())
 				.previewDevice("iPhone SE (2nd generation)")
 				.preferredColorScheme(.dark)
 		}

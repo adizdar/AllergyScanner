@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-	@StateObject private var savedViewModel = SavedIngredientsViewModel()
+	@StateObject private var savedViewModel = SaveIngredientsViewModel()
 	@StateObject private var scanViewModel = ScanViewModel()
 	@StateObject private var myIngridientsViewModel = MyIngridientsViewModel()
 
@@ -16,19 +16,23 @@ struct ContentView: View {
 		TabView {
 			ScanView(viewModel: scanViewModel)
 				.tabItem {
-					Label("Scan", systemImage: "1.circle")
+					Label("Scan", systemImage: "qrcode.viewfinder")
 				}
+				.tag(0)
 
-			SavedIngredientsView(viewModel: savedViewModel)
+			SaveIngredientsView(viewModel: savedViewModel)
 				.tabItem {
-					Label("Save", systemImage: "2.circle")
+					Label("Save", systemImage: "tray.and.arrow.down")
 				}
+				.tag(1)
 
 			MyIngridientsView(viewModel: myIngridientsViewModel)
 				.tabItem {
-					Label("My Ingridients", systemImage: "3.circle")
+					Label("My Ingridients", systemImage: "tray.full")
 				}
+				.tag(2)
 		}
+		.accentColor(Color(UIColor.systemTeal))
 	}
 }
 

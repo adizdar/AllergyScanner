@@ -52,13 +52,12 @@ struct IngridientTextEditor: View {
 					RoundedRectangle(cornerRadius: 10)
 						.fill(Color.white)
 						.shadow(
-							color: hasFocused ? .blue.opacity(0.5) : .black.opacity(0.2),
+							color: hasFocused ? .accentColor.opacity(0.5) : .black.opacity(0.2),
 							radius: 5,
 							x: 0,
 							y: 2
 						)
 				)
-
 		}
 	}
 }

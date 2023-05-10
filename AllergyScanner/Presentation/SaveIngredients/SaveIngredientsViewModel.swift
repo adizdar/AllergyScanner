@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import Combine
 
-class SavedIngredientsViewModel: ObservableObject {
+class SaveIngredientsViewModel: ObservableObject {
 	@Published var ingridentsToSaveText: String = ""
 	@Published var loadedText: String = ""
 	@Published var showSaveConfirmation: Bool = false

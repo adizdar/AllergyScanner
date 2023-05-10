@@ -15,4 +15,10 @@ extension View {
 		self.onChange(of: binding.wrappedValue) { focusState.wrappedValue = $0 }
 			.onChange(of: focusState.wrappedValue) { binding.wrappedValue = $0 }
 	}
+
+	func hideKeyboard() -> some View {
+		self.onTapGesture {
+			UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+		}
+	}
 }
