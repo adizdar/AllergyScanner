@@ -39,7 +39,7 @@ struct SavedIngredientsView: View {
 			if viewModel.showSaveConfirmation {
 				HStack {
 					Spacer()
-					Text("Saved!")
+					Text("\(viewModel.numberOfSavedIngridients ?? "") Saved!")
 						.foregroundColor(.green)
 						.font(.headline)
 					Spacer()

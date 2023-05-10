@@ -84,5 +84,6 @@ class ScanViewModel: ObservableObject {
 	func clearScan() {
 		self.hasFocused = false
 		self.ingridentsToScanText = ""
+		self.matchedIngredients = []
 	}
 }

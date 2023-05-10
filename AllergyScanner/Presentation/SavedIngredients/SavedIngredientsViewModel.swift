@@ -18,6 +18,7 @@ class SavedIngredientsViewModel: ObservableObject {
 	@Published var matchedIngredients: [Ingredient] = []
 	@Published var hasFocused: Bool = false
 	@Published var showingImporter = false
+	@Published private (set) var numberOfSavedIngridients: String? = nil
 
 	var isSaving: Bool {
 		return showProgressBar || showSaveConfirmation
@@ -29,7 +30,6 @@ class SavedIngredientsViewModel: ObservableObject {
 	func saveTextAsIngridients() {
 		self.showProgressBar = true
 		saveToStore() { self.ingridentsToSaveText.makeTextToIngridients() }
-		self.ingridentsToSaveText = ""
 		self.hasFocused = false
 	}
 
@@ -70,7 +70,9 @@ class SavedIngredientsViewModel: ObservableObject {
 					return
 				}
 
-				self.store.saveUnique(ingredients: data)
+				self.numberOfSavedIngridients = String(
+					self.store.saveUnique(ingredients: data)
+				)
 
 				withAnimation {
 					self.showProgressBar = false
@@ -80,6 +82,8 @@ class SavedIngredientsViewModel: ObservableObject {
 				DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
 					withAnimation {
 						self.showSaveConfirmation = false
+						self.numberOfSavedIngridients = nil
+						self.ingridentsToSaveText = ""
 					}
 				}
 			}

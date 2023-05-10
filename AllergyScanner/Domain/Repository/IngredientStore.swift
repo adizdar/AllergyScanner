@@ -71,12 +71,14 @@ class IngredientStore {
 		return matchingIngredients
 	}
 
-	func saveUnique(ingredients: [Ingredient]) {
+	func saveUnique(ingredients: [Ingredient]) -> Int {
 		let uniqueIngredients = ingredients.filter { ingredient in
 			!self.ingredients.contains { $0 == ingredient }
 		}
 
 		self.ingredients = uniqueIngredients + self.ingredients
+
+		return uniqueIngredients.count
 	}
 
 	func load() -> [Ingredient] {
