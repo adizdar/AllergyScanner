@@ -18,7 +18,7 @@ class MyIngridientsViewModel: ObservableObject {
 
 	private var filterIngridients: [Ingredient] = []
 
-	private var store = IngredientStore()
+	private var store = IngredientService()
 	private var cancellables = Set<AnyCancellable>()
 
 	init() {

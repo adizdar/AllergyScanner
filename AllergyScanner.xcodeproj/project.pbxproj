@@ -15,7 +15,7 @@
 		69CCD50F2A066454004D1ED1 /* AllergyScannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD50E2A066454004D1ED1 /* AllergyScannerUITests.swift */; };
 		69CCD5112A066454004D1ED1 /* AllergyScannerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5102A066454004D1ED1 /* AllergyScannerUITestsLaunchTests.swift */; };
 		69CCD5212A068387004D1ED1 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5202A068387004D1ED1 /* Ingredient.swift */; };
-		69CCD5242A068668004D1ED1 /* IngredientStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5232A068668004D1ED1 /* IngredientStore.swift */; };
+		69CCD5242A068668004D1ED1 /* IngredientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5232A068668004D1ED1 /* IngredientService.swift */; };
 		69CCD5272A08221F004D1ED1 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5262A08221F004D1ED1 /* ScanView.swift */; };
 		69CCD5292A082256004D1ED1 /* SaveIngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5282A082256004D1ED1 /* SaveIngredientsView.swift */; };
 		69CCD52B2A08243D004D1ED1 /* ScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD52A2A08243D004D1ED1 /* ScanViewModel.swift */; };
@@ -29,6 +29,10 @@
 		69CCD5422A0A550D004D1ED1 /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5412A0A550D004D1ED1 /* TextFile.swift */; };
 		69CCD5452A0A8C1B004D1ED1 /* IngridientTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5442A0A8C1B004D1ED1 /* IngridientTextEditor.swift */; };
 		69CCD5482A0AC302004D1ED1 /* ModernListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5472A0AC302004D1ED1 /* ModernListRow.swift */; };
+		69CCD54D2A0BBE4D004D1ED1 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD54C2A0BBE4D004D1ED1 /* HealthKitManager.swift */; };
+		69CCD55A2A0BD77F004D1ED1 /* ScanUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5592A0BD77F004D1ED1 /* ScanUseCase.swift */; };
+		69CCD55E2A0BD84F004D1ED1 /* ScanDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD55D2A0BD84F004D1ED1 /* ScanDataRepository.swift */; };
+		69CCD5602A0BE23D004D1ED1 /* ScanDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD55F2A0BE23D004D1ED1 /* ScanDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +65,7 @@
 		69CCD50E2A066454004D1ED1 /* AllergyScannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergyScannerUITests.swift; sourceTree = "<group>"; };
 		69CCD5102A066454004D1ED1 /* AllergyScannerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergyScannerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		69CCD5202A068387004D1ED1 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
-		69CCD5232A068668004D1ED1 /* IngredientStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientStore.swift; sourceTree = "<group>"; };
+		69CCD5232A068668004D1ED1 /* IngredientService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientService.swift; sourceTree = "<group>"; };
 		69CCD5262A08221F004D1ED1 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 		69CCD5282A082256004D1ED1 /* SaveIngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveIngredientsView.swift; sourceTree = "<group>"; };
 		69CCD52A2A08243D004D1ED1 /* ScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewModel.swift; sourceTree = "<group>"; };
@@ -75,6 +79,10 @@
 		69CCD5412A0A550D004D1ED1 /* TextFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFile.swift; sourceTree = "<group>"; };
 		69CCD5442A0A8C1B004D1ED1 /* IngridientTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientTextEditor.swift; sourceTree = "<group>"; };
 		69CCD5472A0AC302004D1ED1 /* ModernListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernListRow.swift; sourceTree = "<group>"; };
+		69CCD54C2A0BBE4D004D1ED1 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		69CCD5592A0BD77F004D1ED1 /* ScanUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanUseCase.swift; sourceTree = "<group>"; };
+		69CCD55D2A0BD84F004D1ED1 /* ScanDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDataRepository.swift; sourceTree = "<group>"; };
+		69CCD55F2A0BE23D004D1ED1 /* ScanDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +133,8 @@
 		69CCD4F12A066452004D1ED1 /* AllergyScanner */ = {
 			isa = PBXGroup;
 			children = (
+				69CCD5522A0BD536004D1ED1 /* Shared */,
+				69CCD54E2A0BD509004D1ED1 /* Modules */,
 				69CCD5402A0A54A4004D1ED1 /* Domain */,
 				69CCD5252A082205004D1ED1 /* Presentation */,
 				69CCD4F22A066452004D1ED1 /* AllergyScannerApp.swift */,
@@ -172,7 +182,7 @@
 		69CCD5222A068654004D1ED1 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				69CCD5232A068668004D1ED1 /* IngredientStore.swift */,
+				69CCD54C2A0BBE4D004D1ED1 /* HealthKitManager.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -203,9 +213,6 @@
 		69CCD53D2A0A544D004D1ED1 /* Scan */ = {
 			isa = PBXGroup;
 			children = (
-				69CCD5262A08221F004D1ED1 /* ScanView.swift */,
-				69CCD52A2A08243D004D1ED1 /* ScanViewModel.swift */,
-				69CCD5382A095278004D1ED1 /* ScannerView.swift */,
 			);
 			path = Scan;
 			sourceTree = "<group>";
@@ -233,9 +240,110 @@
 			isa = PBXGroup;
 			children = (
 				69CCD5222A068654004D1ED1 /* Repository */,
-				69CCD51F2A068368004D1ED1 /* Model */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		69CCD54E2A0BD509004D1ED1 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				69CCD5512A0BD527004D1ED1 /* MyIngredients */,
+				69CCD5502A0BD51F004D1ED1 /* SavedIngredients */,
+				69CCD54F2A0BD519004D1ED1 /* Scan */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		69CCD54F2A0BD519004D1ED1 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				69CCD5582A0BD763004D1ED1 /* Data */,
+				69CCD5572A0BD75C004D1ED1 /* Domain */,
+				69CCD5562A0BD665004D1ED1 /* Presentation */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+		69CCD5502A0BD51F004D1ED1 /* SavedIngredients */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SavedIngredients;
+			sourceTree = "<group>";
+		};
+		69CCD5512A0BD527004D1ED1 /* MyIngredients */ = {
+			isa = PBXGroup;
+			children = (
+				69CCD5552A0BD559004D1ED1 /* Data */,
+				69CCD5542A0BD54E004D1ED1 /* Domain */,
+				69CCD5532A0BD543004D1ED1 /* Presentation */,
+			);
+			path = MyIngredients;
+			sourceTree = "<group>";
+		};
+		69CCD5522A0BD536004D1ED1 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				69CCD5612A0BE4E1004D1ED1 /* Services */,
+				69CCD51F2A068368004D1ED1 /* Model */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		69CCD5532A0BD543004D1ED1 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		69CCD5542A0BD54E004D1ED1 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		69CCD5552A0BD559004D1ED1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		69CCD5562A0BD665004D1ED1 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				69CCD5262A08221F004D1ED1 /* ScanView.swift */,
+				69CCD52A2A08243D004D1ED1 /* ScanViewModel.swift */,
+				69CCD5382A095278004D1ED1 /* ScannerView.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		69CCD5572A0BD75C004D1ED1 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				69CCD5592A0BD77F004D1ED1 /* ScanUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		69CCD5582A0BD763004D1ED1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				69CCD55D2A0BD84F004D1ED1 /* ScanDataRepository.swift */,
+				69CCD55F2A0BE23D004D1ED1 /* ScanDataSource.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		69CCD5612A0BE4E1004D1ED1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				69CCD5232A068668004D1ED1 /* IngredientService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,19 +476,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69CCD55A2A0BD77F004D1ED1 /* ScanUseCase.swift in Sources */,
 				69CCD5212A068387004D1ED1 /* Ingredient.swift in Sources */,
 				69CCD5482A0AC302004D1ED1 /* ModernListRow.swift in Sources */,
 				69CCD52D2A08252D004D1ED1 /* SaveIngredientsViewModel.swift in Sources */,
 				69CCD5312A0840D2004D1ED1 /* View+Extension.swift in Sources */,
-				69CCD5242A068668004D1ED1 /* IngredientStore.swift in Sources */,
+				69CCD5242A068668004D1ED1 /* IngredientService.swift in Sources */,
 				69CCD5392A095278004D1ED1 /* ScannerView.swift in Sources */,
 				69CCD5452A0A8C1B004D1ED1 /* IngridientTextEditor.swift in Sources */,
 				69CCD4F52A066452004D1ED1 /* ContentView.swift in Sources */,
 				69CCD5422A0A550D004D1ED1 /* TextFile.swift in Sources */,
 				69CCD5372A094029004D1ED1 /* MyIngridientsViewModel.swift in Sources */,
+				69CCD54D2A0BBE4D004D1ED1 /* HealthKitManager.swift in Sources */,
 				69CCD5292A082256004D1ED1 /* SaveIngredientsView.swift in Sources */,
 				69CCD4F32A066452004D1ED1 /* AllergyScannerApp.swift in Sources */,
+				69CCD55E2A0BD84F004D1ED1 /* ScanDataRepository.swift in Sources */,
 				69CCD5272A08221F004D1ED1 /* ScanView.swift in Sources */,
+				69CCD5602A0BE23D004D1ED1 /* ScanDataSource.swift in Sources */,
 				69CCD52F2A0825DE004D1ED1 /* String+Extension.swift in Sources */,
 				69CCD5352A094015004D1ED1 /* MyIngridientsView.swift in Sources */,
 				69CCD52B2A08243D004D1ED1 /* ScanViewModel.swift in Sources */,
@@ -547,7 +659,10 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "${PRODUCT_NAME} wants to use your camera to scan the ingridients";
+				INFOPLIST_KEY_NSCameraUsageDescription = "AllergyScanner wants to use your camera to scan the ingridients";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Allow this app to writee allergy baesd content to health data.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow this app to share the health data to show a overview.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Allow this app to access the health data to show a overview.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -586,7 +701,10 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "${PRODUCT_NAME} wants to use your camera to scan the ingridients";
+				INFOPLIST_KEY_NSCameraUsageDescription = "AllergyScanner wants to use your camera to scan the ingridients";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Allow this app to writee allergy baesd content to health data.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow this app to share the health data to show a overview.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Allow this app to access the health data to show a overview.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

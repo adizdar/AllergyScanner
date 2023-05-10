@@ -34,7 +34,7 @@ extension UserDefaults {
 	}
 }
 
-class IngredientStore {
+class IngredientService: ObservableObject {
 	private var cancellables = Set<AnyCancellable>()
 	private var ingredientUserDefaults = UserDefaults()
 	private let ingredientsSubject: CurrentValueSubject<[Ingredient], Never>

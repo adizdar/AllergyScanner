@@ -10,6 +10,7 @@ import SwiftUI
 struct ScanView: View {
 	@ObservedObject var viewModel: ScanViewModel
 	@FocusState private var hasFocused: Bool
+	private let healthKitManager = HealthKitManager()
 
 	var body: some View {
 		VStack {

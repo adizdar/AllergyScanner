@@ -24,7 +24,7 @@ class SaveIngredientsViewModel: ObservableObject {
 		return showProgressBar || showSaveConfirmation
 	}
 
-	private var store = IngredientStore()
+	private var store = IngredientService()
 	private var cancellables = Set<AnyCancellable>()
 
 	func saveTextAsIngridients() {

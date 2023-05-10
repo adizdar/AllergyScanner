@@ -22,7 +22,7 @@ class ScanViewModel: ObservableObject {
 		return self.isScanning
 	}
 
-	private var store = IngredientStore()
+	private var store = IngredientService()
 	private var cancellables = Set<AnyCancellable>()
 
 	func convertScannerResultToIngridients(textPerPage: [String]) {

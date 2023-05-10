@@ -8,7 +8,7 @@
 import Foundation
 
 extension String {
-	internal func makeTextToUniqueIngridientsTextArray() -> [String] {
+	func makeTextToUniqueIngridientsTextArray() -> [String] {
 		var uniqueItems = Set<String>()
 
 		let separators = CharacterSet(
@@ -31,11 +31,11 @@ extension String {
 			.filter { uniqueItems.insert($0.lowercased()).inserted }
 	}
 
-	internal static func supportedIngridientSeperators() -> String {
+	static func supportedIngridientSeperators() -> String {
 		return "\(Self.ingridientSeperators()),"
 	}
 
-	private static func ingridientSeperators() -> String {
+	static func ingridientSeperators() -> String {
 		return "\(Self.documentSeperatorForExport()).•"
 	}
 
