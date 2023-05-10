@@ -21,27 +21,29 @@ struct ScanView: View {
 				importFileOperation: viewModel.importIngridients
 			)
 
-			Button {
-				viewModel.scanTextForIngridients()
-			} label: {
-				Text("Scan")
-					.frame(maxWidth: .infinity)
-			}
-			.disabled(viewModel.isScanDisabled)
-			.buttonStyle(.borderedProminent)
+			HStack {
+				Button {
+					viewModel.scanTextForIngridients()
+				} label: {
+					Text("Scan")
+						.frame(maxWidth: .infinity)
+				}
+				.disabled(viewModel.isScanDisabled)
+				.buttonStyle(.borderedProminent)
 
-			Button {
-				viewModel.showScannerView()
-			} label: {
-				Text("Open Camera")
-					.frame(maxWidth: .infinity)
-			}
-			.disabled(viewModel.isScanDisabled)
-			.buttonStyle(.borderedProminent)
-			.sheet(isPresented: $viewModel.isShowingScannerSheet) {
-				ScannerView(
-					completion: viewModel.convertScannerResultToIngridients
-				)
+				Button {
+					viewModel.showScannerView()
+				} label: {
+					Text("Via Camera")
+						.frame(maxWidth: .infinity)
+				}
+				.disabled(viewModel.isScanDisabled)
+				.buttonStyle(.borderedProminent)
+				.sheet(isPresented: $viewModel.isShowingScannerSheet) {
+					ScannerView(
+						completion: viewModel.convertScannerResultToIngridients
+					)
+				}
 			}
 
 			if viewModel.isScanning {
