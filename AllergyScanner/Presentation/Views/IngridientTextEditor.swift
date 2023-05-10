@@ -15,8 +15,12 @@ struct IngridientTextEditor: View {
 	let importFileOperation: (_ result: Result<[URL], Error>) throws -> ()
 
 	@FocusState private var hasFocused: Bool
+	@Environment(\.colorScheme) var colorScheme
 
 	var body: some View {
+		let defaultFillColor = self.colorScheme == .dark ? Color.black : Color.white
+		let defaultShwadowColor = self.colorScheme == .dark ? Color.white : Color.black
+
 		VStack {
 			HStack {
 				ClearAllButton(operation: clearOperation)
@@ -50,9 +54,9 @@ struct IngridientTextEditor: View {
 				.padding(4)
 				.background(
 					RoundedRectangle(cornerRadius: 10)
-						.fill(Color.white)
+						.fill(defaultFillColor)
 						.shadow(
-							color: hasFocused ? .accentColor.opacity(0.5) : .black.opacity(0.2),
+							color: hasFocused ? .accentColor.opacity(0.5) : defaultShwadowColor.opacity(0.2),
 							radius: 5,
 							x: 0,
 							y: 2
