@@ -10,7 +10,7 @@ import SwiftUI
 struct ScanView: View {
 	@ObservedObject var viewModel: ScanViewModel
 	@FocusState private var hasFocused: Bool
-	private let healthKitManager = HealthKitManager()
+	@EnvironmentObject private var importUseCase: ImportIngridientUseCase
 
 	var body: some View {
 		VStack {
@@ -18,8 +18,9 @@ struct ScanView: View {
 				text: $viewModel.ingridentsToScanText,
 				bindableHasFocues: $viewModel.hasFocused,
 				showingFileImporter: $viewModel.showingImporter,
+				importIngridientUseCase: importUseCase,
 				clearOperation: viewModel.clearScan,
-				importFileOperation: viewModel.importIngridients
+				getImportedIngridientsOperation: viewModel.importIngridients
 			)
 
 			HStack {
@@ -79,19 +80,11 @@ struct ScanView: View {
 struct ScanView_Previews: PreviewProvider {
 	static var previews: some View {
 		Group {
-			ScanView(viewModel: ScanViewModel(
-				scanUseCase: ScanUseCase(
-					repository: ScanDataSource(ingredientStore: IngredientService())
-				))
-			)
+			ScanView(viewModel: ScanViewModel())
 			.previewDevice("iPhone 12 Pro Max")
 			.preferredColorScheme(.light)
-			
-			ScanView(viewModel: ScanViewModel(
-				scanUseCase: ScanUseCase(
-					repository: ScanDataSource(ingredientStore: IngredientService())
-				))
-			)
+
+			ScanView(viewModel: ScanViewModel())
 			.previewDevice("iPhone SE (2nd generation)")
 			.preferredColorScheme(.dark)
 		}

@@ -11,8 +11,9 @@ struct IngridientTextEditor: View {
 	@Binding var text: String
 	@Binding var bindableHasFocues: Bool
 	@Binding var showingFileImporter: Bool
+	let importIngridientUseCase: ImportIngridientUseCase
 	let clearOperation: () -> ()
-	let importFileOperation: (_ result: Result<[URL], Error>) throws -> ()
+	let getImportedIngridientsOperation: (String?) -> ()
 
 	@FocusState private var hasFocused: Bool
 	@Environment(\.colorScheme) var colorScheme
@@ -37,7 +38,11 @@ struct IngridientTextEditor: View {
 					allowsMultipleSelection: false
 				) { result in
 					do {
-						try importFileOperation(result)
+						getImportedIngridientsOperation(
+							try importIngridientUseCase.importIngridients(
+								result: result
+							)
+						)
 					} catch {
 						// TODO error handling
 						print(error.localizedDescription)
@@ -72,8 +77,9 @@ struct TextEditorWithPlaceholder_Previews: PreviewProvider {
 			text: .constant(""),
 			bindableHasFocues: .constant(false),
 			showingFileImporter: .constant(false),
+			importIngridientUseCase: ImportIngridientUseCase(),
 			clearOperation: {},
-			importFileOperation: { result in }
+			getImportedIngridientsOperation: { result in }
 		)
 	}
 }

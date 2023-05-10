@@ -1,9 +1,9 @@
-//
-//  ScanViewModel.swift
-//  AllergyScanner
-//
-//  Created by Ahmed Dizdar on 07.05.23.
-//
+	//
+	//  ScanViewModel.swift
+	//  AllergyScanner
+	//
+	//  Created by Ahmed Dizdar on 07.05.23.
+	//
 
 import Foundation
 import SwiftUI
@@ -22,12 +22,8 @@ class ScanViewModel: ObservableObject {
 		return self.isScanning
 	}
 
-	private let scanUseCase: ScanUseCase
+	var scanUseCase: ScanUseCase?
 	private var cancellables = Set<AnyCancellable>()
-
-	init(scanUseCase: ScanUseCase) {
-		self.scanUseCase = scanUseCase
-	}
 
 	func convertScannerResultToIngridients(textPerPage: [String]) {
 		self.ingridentsToScanText = textPerPage.joined(separator: "\n")
@@ -49,12 +45,16 @@ class ScanViewModel: ObservableObject {
 			.delay(for: .seconds(1), scheduler: DispatchQueue.main)
 			.sink { [weak self] data in
 				guard let self = self else {
-					// TODO add error handling
+						// TODO add error handling
 					return
 				}
 
+				guard let scanUseCase = self.scanUseCase else {
+					fatalError("Scan use case has not been initialised.")
+				}
+
 				let matchingIngredients = ingredientsToScan.flatMap {
-					self.scanUseCase.scanTextForIngredients($0)
+					scanUseCase.scanTextForIngredients($0)
 				}
 
 				self.matchedIngredients = matchingIngredients
@@ -66,23 +66,12 @@ class ScanViewModel: ObservableObject {
 			.store(in: &cancellables)
 	}
 
-	func importIngridients(result: Result<[URL], Error>) throws {
-		guard let selectedFile = try result.get().first else {
-			// TODO add error handling or throw error
+	func importIngridients(_ result: String?) {
+		guard let text = result else {
 			return
 		}
 
-		guard selectedFile.startAccessingSecurityScopedResource() else {
-			fatalError("TODO no rights")
-		}
-
-		let file = try TextFile(
-			fileWrapper: FileWrapper(url: selectedFile)
-		)
-
-		self.ingridentsToScanText = file.text
-
-		selectedFile.stopAccessingSecurityScopedResource()
+		self.ingridentsToScanText = text
 	}
 
 	func clearScan() {

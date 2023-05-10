@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct AllergyScannerApp: App {
 	let ingredientService = IngredientService()
+	let importIngridientUseCase = ImportIngridientUseCase()
 
     var body: some Scene {
 		let scanDataSource: ScanDataSource = ScanDataSource(
@@ -19,6 +20,7 @@ struct AllergyScannerApp: App {
         WindowGroup {
             ContentView()
 				.environmentObject(scanDataSource)
+				.environmentObject(importIngridientUseCase)
         }
 	}
 }

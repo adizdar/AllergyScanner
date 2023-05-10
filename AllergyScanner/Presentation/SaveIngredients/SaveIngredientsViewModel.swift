@@ -38,23 +38,12 @@ class SaveIngredientsViewModel: ObservableObject {
 		self.ingridentsToSaveText = ""
 	}
 
-	func importIngridients(result: Result<[URL], Error>) throws {
-		guard let selectedFile = try result.get().first else {
-				// TODO add error handling or throw error
+	func importIngridients(result: String?) {
+		guard let text = result else {
 			return
 		}
 
-		guard selectedFile.startAccessingSecurityScopedResource() else {
-			fatalError("TODO no rights")
-		}
-
-		let file = try TextFile(
-			fileWrapper: FileWrapper(url: selectedFile)
-		)
-
-		self.ingridentsToSaveText = file.text
-
-		selectedFile.stopAccessingSecurityScopedResource()
+		self.ingridentsToSaveText = text
 	}
 
 	private func saveToStore(using operation: () -> [Ingredient]) {

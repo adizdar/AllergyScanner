@@ -10,20 +10,22 @@ import SwiftUI
 struct ContentView: View {
 	@EnvironmentObject private var scanDataSource: ScanDataSource
 
+	@StateObject private var scanViewModel = ScanViewModel()
 	@StateObject private var savedViewModel = SaveIngredientsViewModel()
 	@StateObject private var myIngridientsViewModel = MyIngridientsViewModel()
 
 	var body: some View {
-		@StateObject var scanViewModel = ScanViewModel(
-			scanUseCase: ScanUseCase(repository: scanDataSource)
-		)
-
 		TabView {
 			ScanView(viewModel: scanViewModel)
 				.tabItem {
 					Label("Scan", systemImage: "qrcode.viewfinder")
 				}
 				.tag(0)
+				.onAppear {
+					scanViewModel.scanUseCase = ScanUseCase(
+						repository: scanDataSource
+					)
+				}
 
 			SaveIngredientsView(viewModel: savedViewModel)
 				.tabItem {
