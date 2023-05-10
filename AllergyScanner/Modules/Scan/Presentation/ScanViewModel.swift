@@ -38,14 +38,11 @@ class ScanViewModel: ObservableObject {
 		self.hasFocused = false
 		self.isScanning = true
 
-		let ingredientsToScan = self.ingridentsToScanText
-			.makeTextToUniqueIngridientsTextArray()
-
-		Just(ingredientsToScan)
+		Just(self.ingridentsToScanText)
 			.delay(for: .seconds(1), scheduler: DispatchQueue.main)
 			.sink { [weak self] data in
 				guard let self = self else {
-						// TODO add error handling
+				// TODO add error handling
 					return
 				}
 
@@ -53,11 +50,7 @@ class ScanViewModel: ObservableObject {
 					fatalError("Scan use case has not been initialised.")
 				}
 
-				let matchingIngredients = ingredientsToScan.flatMap {
-					scanUseCase.scanTextForIngredients($0)
-				}
-
-				self.matchedIngredients = matchingIngredients
+				self.matchedIngredients = scanUseCase.scanTextForIngredients(data)
 
 				withAnimation {
 					self.isScanning = false
