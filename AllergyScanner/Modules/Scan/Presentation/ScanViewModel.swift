@@ -22,8 +22,12 @@ class ScanViewModel: ObservableObject {
 		return self.isScanning
 	}
 
-	private var store = IngredientService()
+	private let scanUseCase: ScanUseCase
 	private var cancellables = Set<AnyCancellable>()
+
+	init(scanUseCase: ScanUseCase) {
+		self.scanUseCase = scanUseCase
+	}
 
 	func convertScannerResultToIngridients(textPerPage: [String]) {
 		self.ingridentsToScanText = textPerPage.joined(separator: "\n")
@@ -50,7 +54,7 @@ class ScanViewModel: ObservableObject {
 				}
 
 				let matchingIngredients = ingredientsToScan.flatMap {
-					self.store.matchIngredients(query: $0)
+					self.scanUseCase.scanTextForIngredients($0)
 				}
 
 				self.matchedIngredients = matchingIngredients

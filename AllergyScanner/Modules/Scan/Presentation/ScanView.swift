@@ -79,13 +79,21 @@ struct ScanView: View {
 struct ScanView_Previews: PreviewProvider {
 	static var previews: some View {
 		Group {
-			ScanView(viewModel: ScanViewModel())
-				.previewDevice("iPhone 12 Pro Max")
-				.preferredColorScheme(.light)
-
-			ScanView(viewModel: ScanViewModel())
-				.previewDevice("iPhone SE (2nd generation)")
-				.preferredColorScheme(.dark)
+			ScanView(viewModel: ScanViewModel(
+				scanUseCase: ScanUseCase(
+					repository: ScanDataSource(ingredientStore: IngredientService())
+				))
+			)
+			.previewDevice("iPhone 12 Pro Max")
+			.preferredColorScheme(.light)
+			
+			ScanView(viewModel: ScanViewModel(
+				scanUseCase: ScanUseCase(
+					repository: ScanDataSource(ingredientStore: IngredientService())
+				))
+			)
+			.previewDevice("iPhone SE (2nd generation)")
+			.preferredColorScheme(.dark)
 		}
 	}
 }

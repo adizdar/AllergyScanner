@@ -9,15 +9,16 @@ import SwiftUI
 
 @main
 struct AllergyScannerApp: App {
-	private let ingredientService = IngredientService()
-	private lazy var ingredientRepository: ScanDataSource = {
-		return ingredientService
-	}()
+	let ingredientService = IngredientService()
 
     var body: some Scene {
+		let scanDataSource: ScanDataSource = ScanDataSource(
+			ingredientStore: ingredientService
+		)
+
         WindowGroup {
             ContentView()
-				.environmentObject(ingredientService)
+				.environmentObject(scanDataSource)
         }
 	}
 }

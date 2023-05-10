@@ -7,18 +7,14 @@
 
 import Foundation
 
-protocol ScanDataSource: ScanDataRepository {}
-extension IngredientService: ScanDataSource {}
+class ScanDataSource: ScanDataRepository, ObservableObject {
+	private let ingredientStore: IngredientService
 
-// Other example
-//class ScanDataSource: ScanDataRepository {
-//	private let ingredientStore: IngredientService
-//
-//	init(ingredientStore: IngredientService) {
-//		self.ingredientStore = ingredientStore
-//	}
-//
-//	func matchIngredients(query: String) -> [Ingredient] {
-//		return ingredientStore.matchIngredients(query: query)
-//	}
-//}
+	init(ingredientStore: IngredientService) {
+		self.ingredientStore = ingredientStore
+	}
+
+	func matchIngredients(query: String) -> [Ingredient] {
+		return ingredientStore.matchIngredients(query: query)
+	}
+}
