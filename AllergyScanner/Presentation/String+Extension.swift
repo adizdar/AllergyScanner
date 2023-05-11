@@ -16,10 +16,12 @@ extension String {
 				"\(Self.ingridientSeperators())\(self.wordSeperator())"
 		)
 
-		let formatedText = self.trimmingCharacters(in: .whitespacesAndNewlines)
+		var formatedText = self.trimmingCharacters(in: .whitespacesAndNewlines)
 			.replacingOccurrences(of: "\n", with: "")
 			.removeExtraWhitespace()
 			.removeWhitespaceAroundCommas()
+			.removePercantageIngridientIndication()
+
 
 		// Save the unique string in original form, but filter out if it exists
 		// in the lowercase form also.
@@ -67,6 +69,16 @@ extension String {
 		result.append((self as NSString).substring(from: start))
 
 		return result.joined(separator: self.wordSeperator())
+	}
+
+	private func removePercantageIngridientIndication() -> String {
+		let pattern = "\\((\\d+|\\d+\\,\\d+)%\\)"
+
+		return self.replacingOccurrences(
+			of: pattern,
+			with: "",
+			options: .regularExpression
+		)
 	}
 
 	private func removeExtraWhitespace() -> String {

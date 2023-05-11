@@ -46,8 +46,8 @@
             filePath = "AllergyScanner/Presentation/String+Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "makeTextToUniqueIngridientsTextArray()"
             landmarkType = "7">
             <Locations>
@@ -111,6 +111,21 @@
                   endingLineNumber = "20"
                   offsetFromSymbolStart = "688">
                </Location>
+               <Location
+                  uuid = "0FFA5275-7DDD-4C01-8816-C76D0959769D - 481ef0b52d73246c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift.String.makeTextToUniqueIngridientsTextArray() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Presentation/String+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1400">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -124,10 +139,10 @@
             filePath = "AllergyScanner/Presentation/String+Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "makeTextToUniqueIngridientsTextArray()"
-            landmarkType = "7">
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "String"
+            landmarkType = "21">
             <Locations>
                <Location
                   uuid = "06AD046E-C6DC-4945-9CF6-0B2B69017C27 - 481ef0b52d732583"
@@ -307,8 +322,8 @@
             filePath = "AllergyScanner/Presentation/String+Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "replaceCommasBetweenWordsWithSeperator()"
             landmarkType = "7">
             <Locations>
@@ -400,8 +415,8 @@
             filePath = "AllergyScanner/Presentation/String+Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "replaceCommasBetweenWordsWithSeperator()"
             landmarkType = "7">
          </BreakpointContent>
@@ -548,6 +563,22 @@
                   offsetFromSymbolStart = "40">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A1FBA190-2BD3-41F3-8ADD-03E7C0F8836C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AllergyScanner/Presentation/String+Extension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "makeTextToUniqueIngridientsTextArray()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
