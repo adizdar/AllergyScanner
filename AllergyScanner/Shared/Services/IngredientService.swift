@@ -65,10 +65,20 @@ class IngredientService: ObservableObject {
 	func matchIngredients(query: String) -> [Ingredient] {
 		let matchingIngredients = self.ingredientUserDefaults.ingridients
 			.filter { ingredient in
-				ingredient.name.range(of: query, options: .caseInsensitive) != nil
+				let ingredientName = ingredient.name.lowercased()
+				let queryTerm = query.lowercased()
+
+				return ingredientName.components(separatedBy: .whitespaces)
+					.contains { $0 == queryTerm }
 			}
 
 		return matchingIngredients
+//		let matchingIngredients = self.ingredientUserDefaults.ingridients
+//			.filter { ingredient in
+//				ingredient.name.range(of: query, options: .caseInsensitive) != nil
+//			}
+//
+//		return matchingIngredients
 	}
 
 	func saveUnique(ingredients: [Ingredient]) -> Int {

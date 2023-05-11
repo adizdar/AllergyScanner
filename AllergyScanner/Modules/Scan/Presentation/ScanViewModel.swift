@@ -25,6 +25,7 @@ class ScanViewModel: ObservableObject {
 	var scanUseCase: ScanUseCase?
 	private var cancellables = Set<AnyCancellable>()
 
+	// TODO camera use case
 	func convertScannerResultToIngridients(textPerPage: [String]) {
 		self.ingridentsToScanText = textPerPage.joined(separator: "\n")
 		self.isShowingScannerSheet = false
