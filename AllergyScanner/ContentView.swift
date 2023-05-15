@@ -18,7 +18,7 @@ struct ContentView: View {
 		TabView {
 			ScanView(viewModel: scanViewModel)
 				.tabItem {
-					Label("Scan", systemImage: "qrcode.viewfinder")
+					Label("Scan", systemImage: "doc.viewfinder.fill")
 				}
 				.tag(0)
 				.onAppear {

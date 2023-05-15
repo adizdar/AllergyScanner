@@ -16,7 +16,7 @@ extension String {
 				"\(Self.ingridientSeperators())\(self.wordSeperator())"
 		)
 
-		var formatedText = self.trimmingCharacters(in: .whitespacesAndNewlines)
+		let formatedText = self.trimmingCharacters(in: .whitespacesAndNewlines)
 			.replacingOccurrences(of: "\n", with: "")
 			.removeExtraWhitespace()
 			.removeWhitespaceAroundCommas()

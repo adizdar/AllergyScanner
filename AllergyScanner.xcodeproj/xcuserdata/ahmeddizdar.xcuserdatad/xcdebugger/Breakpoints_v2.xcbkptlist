@@ -141,8 +141,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
             endingLineNumber = "34"
-            landmarkName = "String"
-            landmarkType = "21">
+            landmarkName = "makeTextToUniqueIngridientsTextArray()"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "06AD046E-C6DC-4945-9CF6-0B2B69017C27 - 481ef0b52d732583"

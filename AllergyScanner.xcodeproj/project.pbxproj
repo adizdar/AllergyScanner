@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		698BE6FA2A0D3375007D0F09 /* TextScanButtonGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698BE6F92A0D3375007D0F09 /* TextScanButtonGroupView.swift */; };
+		698BE6FE2A121CBA007D0F09 /* CopyClipboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698BE6FD2A121CBA007D0F09 /* CopyClipboardButton.swift */; };
 		69CCD4F32A066452004D1ED1 /* AllergyScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD4F22A066452004D1ED1 /* AllergyScannerApp.swift */; };
 		69CCD4F52A066452004D1ED1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD4F42A066452004D1ED1 /* ContentView.swift */; };
 		69CCD4F72A066454004D1ED1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69CCD4F62A066454004D1ED1 /* Assets.xcassets */; };
@@ -24,7 +26,7 @@
 		69CCD5312A0840D2004D1ED1 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5302A0840D2004D1ED1 /* View+Extension.swift */; };
 		69CCD5352A094015004D1ED1 /* MyIngridientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5342A094015004D1ED1 /* MyIngridientsView.swift */; };
 		69CCD5372A094029004D1ED1 /* MyIngridientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5362A094029004D1ED1 /* MyIngridientsViewModel.swift */; };
-		69CCD5392A095278004D1ED1 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5382A095278004D1ED1 /* ScannerView.swift */; };
+		69CCD5392A095278004D1ED1 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5382A095278004D1ED1 /* CameraController.swift */; };
 		69CCD53C2A097A35004D1ED1 /* ClearAllButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD53B2A097A35004D1ED1 /* ClearAllButton.swift */; };
 		69CCD5422A0A550D004D1ED1 /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5412A0A550D004D1ED1 /* TextFile.swift */; };
 		69CCD5452A0A8C1B004D1ED1 /* IngridientTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5442A0A8C1B004D1ED1 /* IngridientTextEditor.swift */; };
@@ -54,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		698BE6F92A0D3375007D0F09 /* TextScanButtonGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextScanButtonGroupView.swift; sourceTree = "<group>"; };
+		698BE6FD2A121CBA007D0F09 /* CopyClipboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyClipboardButton.swift; sourceTree = "<group>"; };
 		69CCD4EF2A066452004D1ED1 /* AllergyScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllergyScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69CCD4F22A066452004D1ED1 /* AllergyScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergyScannerApp.swift; sourceTree = "<group>"; };
 		69CCD4F42A066452004D1ED1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,7 +79,7 @@
 		69CCD5302A0840D2004D1ED1 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		69CCD5342A094015004D1ED1 /* MyIngridientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIngridientsView.swift; sourceTree = "<group>"; };
 		69CCD5362A094029004D1ED1 /* MyIngridientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIngridientsViewModel.swift; sourceTree = "<group>"; };
-		69CCD5382A095278004D1ED1 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		69CCD5382A095278004D1ED1 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		69CCD53B2A097A35004D1ED1 /* ClearAllButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearAllButton.swift; sourceTree = "<group>"; };
 		69CCD5412A0A550D004D1ED1 /* TextFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFile.swift; sourceTree = "<group>"; };
 		69CCD5442A0A8C1B004D1ED1 /* IngridientTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientTextEditor.swift; sourceTree = "<group>"; };
@@ -207,6 +211,7 @@
 			children = (
 				69CCD5472A0AC302004D1ED1 /* ModernListRow.swift */,
 				69CCD53B2A097A35004D1ED1 /* ClearAllButton.swift */,
+				698BE6FD2A121CBA007D0F09 /* CopyClipboardButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -318,7 +323,6 @@
 			children = (
 				69CCD5262A08221F004D1ED1 /* ScanView.swift */,
 				69CCD52A2A08243D004D1ED1 /* ScanViewModel.swift */,
-				69CCD5382A095278004D1ED1 /* ScannerView.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -359,8 +363,10 @@
 		69CCD5632A0BFC08004D1ED1 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				698BE6F92A0D3375007D0F09 /* TextScanButtonGroupView.swift */,
 				69CCD5412A0A550D004D1ED1 /* TextFile.swift */,
 				69CCD5442A0A8C1B004D1ED1 /* IngridientTextEditor.swift */,
+				69CCD5382A095278004D1ED1 /* CameraController.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -501,7 +507,8 @@
 				69CCD52D2A08252D004D1ED1 /* SaveIngredientsViewModel.swift in Sources */,
 				69CCD5312A0840D2004D1ED1 /* View+Extension.swift in Sources */,
 				69CCD5242A068668004D1ED1 /* IngredientService.swift in Sources */,
-				69CCD5392A095278004D1ED1 /* ScannerView.swift in Sources */,
+				698BE6FA2A0D3375007D0F09 /* TextScanButtonGroupView.swift in Sources */,
+				69CCD5392A095278004D1ED1 /* CameraController.swift in Sources */,
 				69CCD5452A0A8C1B004D1ED1 /* IngridientTextEditor.swift in Sources */,
 				69CCD4F52A066452004D1ED1 /* ContentView.swift in Sources */,
 				69CCD5422A0A550D004D1ED1 /* TextFile.swift in Sources */,
@@ -513,6 +520,7 @@
 				69CCD55E2A0BD84F004D1ED1 /* ScanDataRepository.swift in Sources */,
 				69CCD5272A08221F004D1ED1 /* ScanView.swift in Sources */,
 				69CCD5602A0BE23D004D1ED1 /* ScanDataSource.swift in Sources */,
+				698BE6FE2A121CBA007D0F09 /* CopyClipboardButton.swift in Sources */,
 				69CCD52F2A0825DE004D1ED1 /* String+Extension.swift in Sources */,
 				69CCD5352A094015004D1ED1 /* MyIngridientsView.swift in Sources */,
 				69CCD52B2A08243D004D1ED1 /* ScanViewModel.swift in Sources */,

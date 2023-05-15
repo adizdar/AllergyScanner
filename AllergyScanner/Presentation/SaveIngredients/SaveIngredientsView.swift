@@ -23,14 +23,12 @@ struct SaveIngredientsView: View {
 				getImportedIngridientsOperation: viewModel.importIngridients
 			)
 
-			Button {
-				viewModel.saveTextAsIngridients()
-			} label: {
-				Text("Save")
-					.frame(maxWidth: .infinity)
-			}
-			.disabled(viewModel.isSaving)
-			.buttonStyle(.borderedProminent)
+			TextScanButtonGroupView(
+				isScanDisabled: viewModel.isSaving,
+				textWithSystmeImage: (text: "save", imageName: "doc.text"),
+				scanTextOperation: viewModel.saveTextAsIngridients,
+				imageScanCompletedOperation: viewModel.convertScannerResultToIngridients
+			)
 
 			if viewModel.showProgressBar {
 				ProgressView()

@@ -46,6 +46,10 @@ class SaveIngredientsViewModel: ObservableObject {
 		self.ingridentsToSaveText = text
 	}
 
+	func convertScannerResultToIngridients(scannedIngridients: String) {
+		self.ingridentsToSaveText = scannedIngridients
+	}
+
 	private func saveToStore(using operation: () -> [Ingredient]) {
 		self.showProgressBar = true
 

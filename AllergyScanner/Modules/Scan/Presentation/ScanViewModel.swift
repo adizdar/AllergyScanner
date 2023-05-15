@@ -12,27 +12,20 @@ import Combine
 class ScanViewModel: ObservableObject {
 	@Published var ingridentsToScanText: String = ""
 	@Published var matchedIngredients: [Ingredient] = []
-	@Published var isShowingScannerSheet = false
 	@Published var hasFocused: Bool = false
 	@Published var isScanning = false
 	@Published var showingImporter = false
 	@Published var selection: Set<Ingredient.ID> = []
+	var scanUseCase: ScanUseCase?
 
 	var isScanDisabled: Bool {
 		return self.isScanning
 	}
 
-	var scanUseCase: ScanUseCase?
 	private var cancellables = Set<AnyCancellable>()
 
-	// TODO camera use case
-	func convertScannerResultToIngridients(textPerPage: [String]) {
-		self.ingridentsToScanText = textPerPage.joined(separator: "\n")
-		self.isShowingScannerSheet = false
-	}
-
-	func showScannerView() {
-		self.isShowingScannerSheet = true
+	func convertScannerResultToIngridients(scannedIngridients: String) {
+		self.ingridentsToScanText = scannedIngridients
 	}
 
 	func scanTextForIngridients() {

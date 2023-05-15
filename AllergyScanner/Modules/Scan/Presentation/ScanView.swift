@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Vision
 
 struct ScanView: View {
 	@ObservedObject var viewModel: ScanViewModel
@@ -23,30 +24,11 @@ struct ScanView: View {
 				getImportedIngridientsOperation: viewModel.importIngridients
 			)
 
-			HStack {
-				Button {
-					viewModel.scanTextForIngridients()
-				} label: {
-					Text("Scan")
-						.frame(maxWidth: .infinity)
-				}
-				.disabled(viewModel.isScanDisabled)
-				.buttonStyle(.borderedProminent)
-
-				Button {
-					viewModel.showScannerView()
-				} label: {
-					Text("Via Camera")
-						.frame(maxWidth: .infinity)
-				}
-				.disabled(viewModel.isScanDisabled)
-				.buttonStyle(.borderedProminent)
-				.sheet(isPresented: $viewModel.isShowingScannerSheet) {
-					ScannerView(
-						completion: viewModel.convertScannerResultToIngridients
-					)
-				}
-			}
+			TextScanButtonGroupView(
+				isScanDisabled: viewModel.isScanDisabled,
+				scanTextOperation: viewModel.scanTextForIngridients,
+				imageScanCompletedOperation: viewModel.convertScannerResultToIngridients
+			)
 
 			if viewModel.isScanning {
 				ProgressView()

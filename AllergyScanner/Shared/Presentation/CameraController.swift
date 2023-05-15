@@ -9,12 +9,12 @@ import SwiftUI
 import VisionKit
 import Vision
 
-struct ScannerView {
+struct CameraController {
 	var completion: ([String]) -> Void
 }
 
 // Add Coordinator to handle camera text
-extension ScannerView {
+extension CameraController {
 	class Coordinator: NSObject, VNDocumentCameraViewControllerDelegate {
 		var completion: ([String]) -> Void
 
@@ -67,7 +67,7 @@ extension ScannerView {
 }
 
 // Add funcionalty top handle the camera
-extension ScannerView: UIViewControllerRepresentable {
+extension CameraController: UIViewControllerRepresentable {
 	func makeCoordinator() -> Coordinator {
 		Coordinator(completion: completion)
 	}
@@ -88,6 +88,6 @@ extension ScannerView: UIViewControllerRepresentable {
 
 struct ScannerView_Previews: PreviewProvider {
     static var previews: some View {
-		ScannerView(completion: {_ in })
+		CameraController(completion: {_ in })
     }
 }

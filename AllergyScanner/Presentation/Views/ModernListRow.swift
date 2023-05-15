@@ -51,19 +51,6 @@ private struct ModernToolbarContent: View {
 	}
 }
 
-private struct CopyClipboardButton: View {
-	let ingredient: Ingredient
-
-	var body: some View {
-		Button(action: {
-			UIPasteboard.general.string = ingredient.name
-		}) {
-			Label("Copy", systemImage: "doc.on.doc")
-		}
-	}
-}
-
-
 struct ModernListRow_Previews: PreviewProvider {
     static var previews: some View {
         ModernListRow(ingredient: Ingredient(name: "Test"))
