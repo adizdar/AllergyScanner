@@ -9,21 +9,23 @@ import SwiftUI
 
 struct MyIngridientsView: View {
 	@ObservedObject var viewModel: MyIngridientsViewModel
-	@State private var searchText: String = ""
 
 	var body: some View {
 		VStack {
 			NavigationView {
-				let result = viewModel.filteredIngredients(for: searchText)
 				List(selection: $viewModel.selection) {
-					ForEach(result) { ingredient in
-						ModernListRow(ingredient: ingredient)
+					if viewModel.ingridientsToDisplay.isEmpty {
+						NoResultsView()
+					} else {
+						ForEach(viewModel.ingridientsToDisplay) { ingredient in
+							ModernListRow(ingredient: ingredient)
+						}
+						.onDelete(perform: viewModel.deleteIngridient)
 					}
-					.onDelete(perform: viewModel.deleteIngridient)
 				}
 				.listStyle(.plain)
-				.navigationTitle("\(result.count) ingredients")
-				.searchable(text: $searchText, prompt: "Search")
+				.navigationTitle("\(viewModel.ingridientsToDisplay.count) ingredients")
+				.searchable(text: $viewModel.searchText, prompt: "Search")
 				.toolbar {
 					ToolbarItemGroup(placement: .navigationBarLeading) {
 						ClearAllButton(
@@ -61,6 +63,12 @@ struct MyIngridientsView: View {
 		}
 		.padding()
 		.onAppear { viewModel.refresh() }
+	}
+}
+
+private struct NoResultsView: View {
+	var body: some View {
+		Text("No results found")
 	}
 }
 

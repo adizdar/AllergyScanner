@@ -34,7 +34,7 @@ extension UserDefaults {
 	}
 }
 
-class IngredientService: ObservableObject {
+class IngredientService: ObservableObject, IngredientRepository {
 	private var cancellables = Set<AnyCancellable>()
 	private var ingredientUserDefaults = UserDefaults()
 	private let ingredientsSubject: CurrentValueSubject<[Ingredient], Never>
@@ -100,12 +100,12 @@ class IngredientService: ObservableObject {
 		self.ingredientUserDefaults.ingridients.remove(at: itemIndex)
 	}
 
-	func clear() {
+	func clearAll() {
 		ingredientUserDefaults.removeObject(forKey: ingredientsKey)
 		self.ingredients = []
 	}
 
-	func publisher() -> AnyPublisher<[Ingredient], Never> {
+	func getAllPublisher() -> AnyPublisher<[Ingredient], Never> {
 		return ingredientsSubject.eraseToAnyPublisher()
 	}
 
