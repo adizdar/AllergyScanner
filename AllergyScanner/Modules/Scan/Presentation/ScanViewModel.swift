@@ -5,6 +5,7 @@
 	//  Created by Ahmed Dizdar on 07.05.23.
 	//
 
+import Factory
 import Foundation
 import SwiftUI
 import Combine
@@ -16,7 +17,8 @@ class ScanViewModel: ObservableObject {
 	@Published var isScanning = false
 	@Published var showingImporter = false
 	@Published var selection: Set<Ingredient.ID> = []
-	var scanUseCase: ScanUseCase?
+	@Injected(\.importIngridientUseCase) var importIngridientUseCase
+	@Injected(\.scanDataUseCase) var scanUseCase
 
 	var isScanDisabled: Bool {
 		return self.isScanning
@@ -40,11 +42,8 @@ class ScanViewModel: ObservableObject {
 					return
 				}
 
-				guard let scanUseCase = self.scanUseCase else {
-					fatalError("Scan use case has not been initialised.")
-				}
-
-				self.matchedIngredients = scanUseCase.scanTextForIngredients(data)
+				self.matchedIngredients = self.scanUseCase
+					.scanTextForIngredients(data)
 
 				withAnimation {
 					self.isScanning = false

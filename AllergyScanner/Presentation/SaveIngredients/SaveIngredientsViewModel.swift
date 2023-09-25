@@ -4,7 +4,7 @@
 //
 //  Created by Ahmed Dizdar on 07.05.23.
 //
-
+import Factory
 import Foundation
 import SwiftUI
 import Combine
@@ -19,6 +19,7 @@ class SaveIngredientsViewModel: ObservableObject {
 	@Published var hasFocused: Bool = false
 	@Published var showingImporter = false
 	@Published private (set) var numberOfSavedIngridients: String? = nil
+	@Injected(\.importIngridientUseCase) var importIngridientUseCase
 
 	var isSaving: Bool {
 		return showProgressBar || showSaveConfirmation

@@ -5,14 +5,11 @@
 //  Created by Ahmed Dizdar on 10.05.23.
 //
 
+import Factory
 import Foundation
 
 class ScanUseCase {
-	private let repository: ScanDataRepository
-
-	init(repository: ScanDataRepository) {
-		self.repository = repository
-	}
+	@Injected(\.scanRepository) private var repository
 
 	func scanTextForIngredients(_ text: String) -> [Ingredient] {
 		let ingredientsToScan = text.makeTextToUniqueIngridientsTextArray()

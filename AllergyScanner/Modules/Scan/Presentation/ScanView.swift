@@ -11,7 +11,6 @@ import Vision
 struct ScanView: View {
 	@ObservedObject var viewModel: ScanViewModel
 	@FocusState private var hasFocused: Bool
-	@EnvironmentObject private var importUseCase: ImportIngridientUseCase
 
 	var body: some View {
 		VStack {
@@ -19,7 +18,7 @@ struct ScanView: View {
 				text: $viewModel.ingridentsToScanText,
 				bindableHasFocues: $viewModel.hasFocused,
 				showingFileImporter: $viewModel.showingImporter,
-				importIngridientUseCase: importUseCase,
+				importIngridientUseCase: viewModel.importIngridientUseCase,
 				clearOperation: viewModel.clearScan,
 				getImportedIngridientsOperation: viewModel.importIngridients
 			)

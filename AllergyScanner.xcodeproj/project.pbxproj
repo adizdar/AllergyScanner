@@ -38,7 +38,6 @@
 		69CCD54D2A0BBE4D004D1ED1 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD54C2A0BBE4D004D1ED1 /* HealthKitManager.swift */; };
 		69CCD55A2A0BD77F004D1ED1 /* ScanUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5592A0BD77F004D1ED1 /* ScanUseCase.swift */; };
 		69CCD55E2A0BD84F004D1ED1 /* ScanDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD55D2A0BD84F004D1ED1 /* ScanDataRepository.swift */; };
-		69CCD5602A0BE23D004D1ED1 /* ScanDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD55F2A0BE23D004D1ED1 /* ScanDataSource.swift */; };
 		69CCD5652A0BFC63004D1ED1 /* ImportIngridientUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD5642A0BFC63004D1ED1 /* ImportIngridientUseCase.swift */; };
 		69EB4E872AC0B78F00BB0231 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 69EB4E862AC0B78F00BB0231 /* Factory */; };
 /* End PBXBuildFile section */
@@ -96,7 +95,6 @@
 		69CCD54C2A0BBE4D004D1ED1 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		69CCD5592A0BD77F004D1ED1 /* ScanUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanUseCase.swift; sourceTree = "<group>"; };
 		69CCD55D2A0BD84F004D1ED1 /* ScanDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDataRepository.swift; sourceTree = "<group>"; };
-		69CCD55F2A0BE23D004D1ED1 /* ScanDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDataSource.swift; sourceTree = "<group>"; };
 		69CCD5642A0BFC63004D1ED1 /* ImportIngridientUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportIngridientUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -361,7 +359,6 @@
 		69CCD5582A0BD763004D1ED1 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				69CCD55F2A0BE23D004D1ED1 /* ScanDataSource.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -542,7 +539,6 @@
 				69CCD4F32A066452004D1ED1 /* AllergyScannerApp.swift in Sources */,
 				69CCD55E2A0BD84F004D1ED1 /* ScanDataRepository.swift in Sources */,
 				69CCD5272A08221F004D1ED1 /* ScanView.swift in Sources */,
-				69CCD5602A0BE23D004D1ED1 /* ScanDataSource.swift in Sources */,
 				698BE6FE2A121CBA007D0F09 /* CopyClipboardButton.swift in Sources */,
 				69CCD52F2A0825DE004D1ED1 /* String+Extension.swift in Sources */,
 				69CCD5352A094015004D1ED1 /* MyIngridientsView.swift in Sources */,

@@ -16,4 +16,16 @@ extension Container {
 	var ingridientUseCase: Factory<IngredientUseCase> {
 		Factory(self) { UserIngredientUseCase() }
 	}
+
+	var importIngridientUseCase: Factory<ImportIngridientUseCase> {
+		Factory(self) { ImportIngridientUseCase() }
+	}
+
+	var scanRepository: Factory<ScanDataRepository> {
+		Factory(self) { IngredientService() }
+	}
+
+	var scanDataUseCase: Factory<ScanUseCase> {
+		Factory(self) { ScanUseCase() }
+	}
 }

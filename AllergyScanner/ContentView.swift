@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-	@EnvironmentObject private var scanDataSource: ScanDataSource
-
 	@StateObject private var scanViewModel = ScanViewModel()
 	@StateObject private var savedViewModel = SaveIngredientsViewModel()
 	@StateObject private var myIngridientsViewModel = MyIngridientsViewModel()
@@ -21,11 +19,6 @@ struct ContentView: View {
 					Label("Scan", systemImage: "doc.viewfinder.fill")
 				}
 				.tag(0)
-				.onAppear {
-					scanViewModel.scanUseCase = ScanUseCase(
-						repository: scanDataSource
-					)
-				}
 
 			SaveIngredientsView(viewModel: savedViewModel)
 				.tabItem {

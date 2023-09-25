@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SaveIngredientsView: View {
-	@EnvironmentObject private var importUseCase: ImportIngridientUseCase
 	@ObservedObject var viewModel: SaveIngredientsViewModel
 	@FocusState private var hasFocused: Bool
 
@@ -18,7 +17,7 @@ struct SaveIngredientsView: View {
 				text: $viewModel.ingridentsToSaveText,
 				bindableHasFocues: $viewModel.hasFocused,
 				showingFileImporter: $viewModel.showingImporter,
-				importIngridientUseCase: importUseCase,
+				importIngridientUseCase: viewModel.importIngridientUseCase,
 				clearOperation: viewModel.clearSaveEditor,
 				getImportedIngridientsOperation: viewModel.importIngridients
 			)
