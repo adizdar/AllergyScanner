@@ -12,8 +12,8 @@ extension View {
 		_ binding: Binding<T>,
 		with focusState: FocusState<T>
 	) -> some View {
-		self.onChange(of: binding.wrappedValue) { focusState.wrappedValue = $0 }
-			.onChange(of: focusState.wrappedValue) { binding.wrappedValue = $0 }
+		self.onChange(of: binding.wrappedValue) { oldState, newState in focusState.wrappedValue = newState }
+			.onChange(of: focusState.wrappedValue) { oldState, newState in binding.wrappedValue = newState }
 	}
 
 	func hideKeyboard() -> some View {

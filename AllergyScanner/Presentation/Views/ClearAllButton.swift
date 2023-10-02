@@ -18,6 +18,7 @@ struct ClearAllButton: View {
 				Label("Clear", systemImage: "trash")
 					.font(.callout)
 					.foregroundColor(.red)
+					.tint(.red)
 			}
 			Spacer()
 		}

@@ -31,6 +31,7 @@ struct MyIngridientsView: View {
 						ClearAllButton(
 							operation: viewModel.clearAllSavedIngridients
 						)
+						.tint(.red)
 					}
 					ToolbarItemGroup(placement: .navigationBarTrailing) {
 						HStack {
