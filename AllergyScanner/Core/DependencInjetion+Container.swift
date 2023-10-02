@@ -28,4 +28,8 @@ extension Container {
 	var scanDataUseCase: Factory<ScanUseCase> {
 		Factory(self) { ScanUseCase() }
 	}
+
+	var pasteTextUseCase: Factory<PasteTextUseCase> {
+		Factory(self) { PasteTextUseCase() }
+	}
 }

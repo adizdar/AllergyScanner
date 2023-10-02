@@ -1,10 +1,11 @@
-	//
-	//  TextEditorWithPlaceholder.swift
-	//  AllergyScanner
-	//
-	//  Created by Ahmed Dizdar on 09.05.23.
-	//
+//
+//  TextEditorWithPlaceholder.swift
+//  AllergyScanner
+//
+//  Created by Ahmed Dizdar on 09.05.23.
+//
 
+import Factory
 import SwiftUI
 
 struct IngridientTextEditor: View {
@@ -14,13 +15,15 @@ struct IngridientTextEditor: View {
 	let importIngridientUseCase: ImportIngridientUseCase
 	let clearOperation: () -> ()
 	let getImportedIngridientsOperation: (String?) -> ()
+	@Environment(\.colorScheme) var colorScheme
 
 	@FocusState private var hasFocused: Bool
-	@Environment(\.colorScheme) var colorScheme
+	@Injected(\.pasteTextUseCase) private var pasteTextUseCase
 
 	var body: some View {
 		let defaultFillColor = self.colorScheme == .dark ? Color.black : Color.white
 		let defaultShwadowColor = self.colorScheme == .dark ? Color.white : Color.black
+		let textToPaste = self.pasteTextUseCase.getText()
 
 		VStack {
 			HStack {
@@ -66,6 +69,26 @@ struct IngridientTextEditor: View {
 							x: 0,
 							y: 2
 						)
+				)
+				.overlay(
+					ZStack {
+						Button {
+							self.text = textToPaste ?? ""
+							self.pasteTextUseCase.clear()
+						} label : {
+							Label("Paste", systemImage: "doc.on.clipboard")
+						}
+						.opacity(textToPaste?.isEmpty == false ? 1 : 0)
+						.labelStyle(.iconOnly)
+						.buttonStyle(.borderedProminent)
+						.buttonBorderShape(.roundedRectangle(radius: 10))
+						.tint(Color.orange)
+					}
+						.frame(maxWidth: .infinity, 
+							   maxHeight: .infinity,
+							   alignment: .bottomTrailing
+						)
+						.padding(10)
 				)
 		}
 	}
