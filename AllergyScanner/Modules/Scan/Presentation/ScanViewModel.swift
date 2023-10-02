@@ -12,7 +12,7 @@ import Combine
 
 class ScanViewModel: ObservableObject {
 	@Published var ingridentsToScanText: String = ""
-	@Published var matchedIngredients: [Ingredient] = []
+	@Published var matchedIngredients: [Ingredient]? = nil
 	@Published var hasFocused: Bool = false
 	@Published var isScanning = false
 	@Published var showingImporter = false
@@ -63,6 +63,6 @@ class ScanViewModel: ObservableObject {
 	func clearScan() {
 		self.hasFocused = false
 		self.ingridentsToScanText = ""
-		self.matchedIngredients = []
+		self.matchedIngredients = nil
 	}
 }

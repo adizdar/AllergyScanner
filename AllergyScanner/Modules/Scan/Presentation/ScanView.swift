@@ -33,7 +33,7 @@ struct ScanView: View {
 				ProgressView()
 					.progressViewStyle(CircularProgressViewStyle())
 					.padding()
-			} else if viewModel.matchedIngredients.isEmpty {
+			} else if viewModel.matchedIngredients?.isEmpty == true {
 				HStack {
 					Image(systemName: "exclamationmark.triangle.fill")
 						.font(.title3)
@@ -44,9 +44,9 @@ struct ScanView: View {
 						.multilineTextAlignment(.center)
 				}
 				.padding()
-			} else {
+			} else if (viewModel.matchedIngredients?.isEmpty == false) {
 				List(selection: $viewModel.selection) {
-					ForEach(viewModel.matchedIngredients) { ingredient in
+					ForEach(viewModel.matchedIngredients ?? []) { ingredient in
 						ModernListRow(ingredient: ingredient)
 					}
 				}
