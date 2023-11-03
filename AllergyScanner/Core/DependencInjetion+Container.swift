@@ -32,4 +32,12 @@ extension Container {
 	var pasteTextUseCase: Factory<PasteTextUseCase> {
 		Factory(self) { PasteTextUseCase() }
 	}
+
+	var appSettingsUseCase: Factory<AppSettingsUseCase> {
+		Factory(self) { AppSettingsUseCase() }
+	}
+
+	var appRepository: Factory<AppRepository> {
+		Factory(self) { UserDefaultsAppRepository() }
+	}
 }

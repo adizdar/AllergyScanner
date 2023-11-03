@@ -591,8 +591,8 @@
             filePath = "AllergyScanner/Core/Presentation/IngridientTextEditor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -600,17 +600,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F70FD465-DB3F-404F-A582-96000C71B86F"
+            uuid = "02D11D59-464A-42F1-8A38-557F2E7DEE50"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AllergyScanner/Core/Presentation/IngridientTextEditor.swift"
+            filePath = "AllergyScanner/Core/Domain/PasteTextUseCase.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "body"
-            landmarkType = "24">
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C6DB374B-6789-40B2-B582-2DC6AB7E3653"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AllergyScanner/Core/Domain/AppSettingsUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "hasShownPastePermissionPopup()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C6DB374B-6789-40B2-B582-2DC6AB7E3653 - 8bf2aaa97b6a76d8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AllergyScanner.AppSettingsUseCase.hasShownPastePermissionPopup() -&gt; Swift.Bool"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Core/Domain/AppSettingsUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "C6DB374B-6789-40B2-B582-2DC6AB7E3653 - 8bf2aaa97b6a76d8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AllergyScanner.AppSettingsUseCase.hasShownPastePermissionPopup() -&gt; Swift.Bool"
+                  moduleName = "AllergyScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmeddizdar/Documents/Development/AllergyScanner/AllergyScanner/Core/Domain/AppSettingsUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+import Factory
 
 struct ContentView: View {
 	@StateObject private var scanViewModel = ScanViewModel()
 	@StateObject private var savedViewModel = SaveIngredientsViewModel()
 	@StateObject private var myIngridientsViewModel = MyIngridientsViewModel()
+
+	@State private var showPastePermissionAlert = false
+	@Injected(\.appSettingsUseCase) private var appSettingsUseCase
 
 	var body: some View {
 		TabView {
@@ -33,6 +37,22 @@ struct ContentView: View {
 				.tag(2)
 		}
 		.accentColor(Color(UIColor.systemTeal))
+		.alert(isPresented: $showPastePermissionAlert) {
+			Alert(
+				title: Text("Paste text permission"),
+				message: Text("This app would like permission to access your clipboard so you can paste text into it. To allow please choose Paste from Other Apps to Allow."),
+				primaryButton: .default(Text("Cancel")),
+				secondaryButton: .default(Text("Go to Settings")) {
+					AppSettingsUseCase().openSettings()
+				}
+			)
+		}
+		.onAppear {
+			if !self.appSettingsUseCase.hasShownPastePermissionPopup() {
+				self.showPastePermissionAlert = true
+				self.appSettingsUseCase.setShwonPastePermissionPopup(true)
+			}
+		}
 	}
 }
 

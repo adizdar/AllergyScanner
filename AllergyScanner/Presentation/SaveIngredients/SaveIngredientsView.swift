@@ -41,7 +41,7 @@ struct SaveIngredientsView: View {
 					Text("\(viewModel.numberOfSavedIngridients ?? "") Saved!")
 						.foregroundColor(.green)
 						.font(.headline)
-					Spacer()
+						Spacer()
 				}
 				.padding()
 				.background(Color(.systemGray6))

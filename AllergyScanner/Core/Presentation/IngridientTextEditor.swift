@@ -12,18 +12,20 @@ struct IngridientTextEditor: View {
 	@Binding var text: String
 	@Binding var bindableHasFocues: Bool
 	@Binding var showingFileImporter: Bool
+	@State var clipboardContent: String? = nil
+	@Environment(\.colorScheme) var colorScheme
+
 	let importIngridientUseCase: ImportIngridientUseCase
 	let clearOperation: () -> ()
 	let getImportedIngridientsOperation: (String?) -> ()
-	@Environment(\.colorScheme) var colorScheme
 
 	@FocusState private var hasFocused: Bool
 	@Injected(\.pasteTextUseCase) private var pasteTextUseCase
+	@Injected(\.appSettingsUseCase) private var appSettingsUseCase
 
 	var body: some View {
 		let defaultFillColor = self.colorScheme == .dark ? Color.black : Color.white
 		let defaultShwadowColor = self.colorScheme == .dark ? Color.white : Color.black
-		let textToPaste = self.pasteTextUseCase.getText()
 
 		VStack {
 			HStack {
@@ -32,7 +34,10 @@ struct IngridientTextEditor: View {
 				Button {
 					showingFileImporter = true
 				} label: {
-					Label("Import", systemImage: "square.and.arrow.down")
+					Label(
+						"Import",
+						systemImage: "square.and.arrow.down"
+					)
 				}
 				.buttonStyle(.borderless)
 				.fileImporter(
@@ -73,12 +78,12 @@ struct IngridientTextEditor: View {
 				.overlay(
 					ZStack {
 						Button {
-							self.text = textToPaste ?? ""
+							self.text = self.pasteTextUseCase.clipboardContent ?? ""
 							self.pasteTextUseCase.clear()
 						} label : {
 							Label("Paste", systemImage: "doc.on.clipboard")
 						}
-						.opacity(textToPaste?.isEmpty == false ? 1 : 0)
+						.opacity(self.pasteTextUseCase.clipboardContent != nil ? 1 : 0)
 						.labelStyle(.iconOnly)
 						.buttonStyle(.borderedProminent)
 						.buttonBorderShape(.roundedRectangle(radius: 10))

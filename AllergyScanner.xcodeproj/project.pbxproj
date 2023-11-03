@@ -14,6 +14,9 @@
 		698988912AC98E9B00155B84 /* PasteTextUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698988902AC98E9B00155B84 /* PasteTextUseCase.swift */; };
 		698BE6FA2A0D3375007D0F09 /* TextScanButtonGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698BE6F92A0D3375007D0F09 /* TextScanButtonGroupView.swift */; };
 		698BE6FE2A121CBA007D0F09 /* CopyClipboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698BE6FD2A121CBA007D0F09 /* CopyClipboardButton.swift */; };
+		69920EA02AEE86640047818B /* AppSettingsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69920E9F2AEE86640047818B /* AppSettingsUseCase.swift */; };
+		69920EA22AF3F6700047818B /* AppRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69920EA12AF3F6700047818B /* AppRepository.swift */; };
+		69920EA42AF3F6910047818B /* UserDefaultsAppRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69920EA32AF3F6910047818B /* UserDefaultsAppRepository.swift */; };
 		69CCD4F32A066452004D1ED1 /* AllergyScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD4F22A066452004D1ED1 /* AllergyScannerApp.swift */; };
 		69CCD4F52A066452004D1ED1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCD4F42A066452004D1ED1 /* ContentView.swift */; };
 		69CCD4F72A066454004D1ED1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69CCD4F62A066454004D1ED1 /* Assets.xcassets */; };
@@ -68,6 +71,9 @@
 		698988902AC98E9B00155B84 /* PasteTextUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteTextUseCase.swift; sourceTree = "<group>"; };
 		698BE6F92A0D3375007D0F09 /* TextScanButtonGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextScanButtonGroupView.swift; sourceTree = "<group>"; };
 		698BE6FD2A121CBA007D0F09 /* CopyClipboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyClipboardButton.swift; sourceTree = "<group>"; };
+		69920E9F2AEE86640047818B /* AppSettingsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsUseCase.swift; sourceTree = "<group>"; };
+		69920EA12AF3F6700047818B /* AppRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRepository.swift; sourceTree = "<group>"; };
+		69920EA32AF3F6910047818B /* UserDefaultsAppRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsAppRepository.swift; sourceTree = "<group>"; };
 		69CCD4EF2A066452004D1ED1 /* AllergyScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllergyScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69CCD4F22A066452004D1ED1 /* AllergyScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergyScannerApp.swift; sourceTree = "<group>"; };
 		69CCD4F42A066452004D1ED1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -199,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				69CCD5232A068668004D1ED1 /* IngredientService.swift */,
+				69920EA32AF3F6910047818B /* UserDefaultsAppRepository.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -371,6 +378,8 @@
 				692BCDE72AC167FA00F71FA4 /* Model */,
 				69CCD5642A0BFC63004D1ED1 /* ImportIngridientUseCase.swift */,
 				698988902AC98E9B00155B84 /* PasteTextUseCase.swift */,
+				69920E9F2AEE86640047818B /* AppSettingsUseCase.swift */,
+				69920EA12AF3F6700047818B /* AppRepository.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -536,12 +545,15 @@
 				692BCDE92AC1754700F71FA4 /* IngredientRepository.swift in Sources */,
 				69CCD5422A0A550D004D1ED1 /* TextFile.swift in Sources */,
 				69CCD5372A094029004D1ED1 /* MyIngridientsViewModel.swift in Sources */,
+				69920EA02AEE86640047818B /* AppSettingsUseCase.swift in Sources */,
 				69CCD5652A0BFC63004D1ED1 /* ImportIngridientUseCase.swift in Sources */,
 				69CCD54D2A0BBE4D004D1ED1 /* HealthKitManager.swift in Sources */,
 				69CCD5292A082256004D1ED1 /* SaveIngredientsView.swift in Sources */,
+				69920EA22AF3F6700047818B /* AppRepository.swift in Sources */,
 				692BCDEB2AC1778C00F71FA4 /* IngredientUseCase.swift in Sources */,
 				69CCD4F32A066452004D1ED1 /* AllergyScannerApp.swift in Sources */,
 				69CCD55E2A0BD84F004D1ED1 /* ScanDataRepository.swift in Sources */,
+				69920EA42AF3F6910047818B /* UserDefaultsAppRepository.swift in Sources */,
 				69CCD5272A08221F004D1ED1 /* ScanView.swift in Sources */,
 				698BE6FE2A121CBA007D0F09 /* CopyClipboardButton.swift in Sources */,
 				69CCD52F2A0825DE004D1ED1 /* String+Extension.swift in Sources */,
@@ -711,6 +723,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "AllergyScanner wants to use your camera to scan the ingridients";
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Allow this app to writee allergy baesd content to health data.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow this app to share the health data to show a overview.";
@@ -753,6 +766,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "AllergyScanner wants to use your camera to scan the ingridients";
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Allow this app to writee allergy baesd content to health data.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow this app to share the health data to show a overview.";
