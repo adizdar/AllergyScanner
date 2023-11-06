@@ -10,7 +10,7 @@ import Factory
 
 extension Container {
 	var ingridientRepository: Factory<IngredientRepository> {
-		Factory(self) { IngredientService() }
+		Factory(self) { IngredientRepositoryImpl() }
 	}
 
 	var ingridientUseCase: Factory<IngredientUseCase> {
@@ -22,7 +22,7 @@ extension Container {
 	}
 
 	var scanRepository: Factory<ScanDataRepository> {
-		Factory(self) { IngredientService() }
+		Factory(self) { IngredientRepositoryImpl() }
 	}
 
 	var scanDataUseCase: Factory<ScanUseCase> {

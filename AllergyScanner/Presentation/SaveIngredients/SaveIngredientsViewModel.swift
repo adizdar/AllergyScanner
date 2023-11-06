@@ -25,7 +25,7 @@ class SaveIngredientsViewModel: ObservableObject {
 		return showProgressBar || showSaveConfirmation
 	}
 
-	private var store = IngredientService()
+	private var store = IngredientRepositoryImpl()
 	private var cancellables = Set<AnyCancellable>()
 
 	func saveTextAsIngridients() {
@@ -35,7 +35,7 @@ class SaveIngredientsViewModel: ObservableObject {
 	}
 
 	func clearSaveEditor() {
-		self.hasFocused = false
+		self.hasFocused = false 
 		self.ingridentsToSaveText = ""
 	}
 

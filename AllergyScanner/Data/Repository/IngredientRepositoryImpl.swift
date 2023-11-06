@@ -34,7 +34,7 @@ extension UserDefaults {
 	}
 }
 
-class IngredientService: ObservableObject, IngredientRepository, ScanDataRepository {
+class IngredientRepositoryImpl: ObservableObject, IngredientRepository, ScanDataRepository {
 	private var cancellables = Set<AnyCancellable>()
 	private var ingredientUserDefaults = UserDefaults()
 	private let ingredientsSubject: CurrentValueSubject<[Ingredient], Never>
