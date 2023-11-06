@@ -707,7 +707,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = IngreSafe;
+				INFOPLIST_KEY_CFBundleDisplayName = IngreInvestigator;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSCameraUsageDescription = "AllergyScanner wants to use your camera to scan the ingridients";
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Allow this app to writee allergy baesd content to health data.";
@@ -751,7 +751,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = IngreSafe;
+				INFOPLIST_KEY_CFBundleDisplayName = IngreInvestigator;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSCameraUsageDescription = "AllergyScanner wants to use your camera to scan the ingridients";
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Allow this app to writee allergy baesd content to health data.";
