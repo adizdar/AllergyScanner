@@ -303,8 +303,8 @@
 		69CCD5252A082205004D1ED1 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				695B539F2AF935BD001A7D16 /* ModernListRow */,
 				69CCD53A2A097A1B004D1ED1 /* Common */,
+				695B539F2AF935BD001A7D16 /* ModernListRow */,
 				69CCD53F2A0A5480004D1ED1 /* MyIngridients */,
 				69CCD53E2A0A5465004D1ED1 /* SaveIngredients */,
 				69CCD53D2A0A544D004D1ED1 /* Scan */,
@@ -707,7 +707,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_CFBundleDisplayName = IngreSafe;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSCameraUsageDescription = "AllergyScanner wants to use your camera to scan the ingridients";
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Allow this app to writee allergy baesd content to health data.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow this app to share the health data to show a overview.";
@@ -750,7 +751,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_CFBundleDisplayName = IngreSafe;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSCameraUsageDescription = "AllergyScanner wants to use your camera to scan the ingridients";
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Allow this app to writee allergy baesd content to health data.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow this app to share the health data to show a overview.";
