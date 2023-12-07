@@ -29,6 +29,7 @@ class SaveIngredientsViewModel: ObservableObject {
 	private var cancellables = Set<AnyCancellable>()
 
 	func saveTextAsIngridients() {
+		// TODO Use case
 		self.showProgressBar = true
 		saveToStore() { self.ingridentsToSaveText.makeTextToIngridients() }
 		self.hasFocused = false

@@ -72,7 +72,7 @@ extension String {
 	}
 
 	private func removePercantageIngridientIndication() -> String {
-		let pattern = "\\((\\d+|\\d+\\,\\d+)%\\)"
+		let pattern = "\\((\\d+|\\d+\\,\\d+|\\d+\\.\\d+)%\\)|(\\d+|\\d+\\,\\d+|\\d+\\.\\d+)%"
 
 		return self.replacingOccurrences(
 			of: pattern,
